@@ -1,0 +1,13 @@
+# Site settings
+title: Title
+email: email
+description: > # this means to ignore newlines until "baseurl:"
+  Description
+baseurl: "/example" # the subpath of your site, e.g. /blog/
+url: "http://spjuanjoc.github.io" # the base hostname & protocol for your site
+#twitter_username: 
+#github_username:  
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:title:output_ext
