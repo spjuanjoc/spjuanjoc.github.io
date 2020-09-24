@@ -12,4 +12,4 @@ url: "http://spjuanjoc.github.io" # the base hostname & protocol for your site
 markdown: kramdown
 permalink: /:year/:title:output_ext
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
