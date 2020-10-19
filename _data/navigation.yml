@@ -1,0 +1,31 @@
+#
+main:
+  - title: "About"
+    url: /about
+  - title: "Group 1"
+    subfolderitems:
+      - page: "Index"
+        url: /index
+      - page: "About2"
+        url: /about
+
+# sidebar navigation list sample
+sidebar-sample:
+  - title: "Parent Page A"
+    children:
+      - title: "Child Page A1"
+        url: /
+      - title: "Child Page A2"
+        url: /
+  - title: "Parent Page B"
+    children:
+      - title: "Child Page B1"
+        url: /
+      - title: "Child Page B2"
+        url: /
+  - title: "Parent Page C"
+    children:
+      - title: "Child Page C1"
+        url: /
+      - title: "Child Page C2"
+        url: /
