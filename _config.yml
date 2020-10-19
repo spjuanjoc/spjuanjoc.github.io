@@ -46,6 +46,7 @@ minimal_mistakes_skin    : "dark" #"default"
 # ==============================================================================
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
   - jekyll-paginate
   - jekyll-sitemap
 
