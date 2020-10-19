@@ -7,6 +7,7 @@ baseurl:  ""
 
 lang: es
 encoding: "utf-8"
+copyright: copyright
 
 title: spjuanjoc.github.io
 
@@ -39,7 +40,7 @@ accent_color:          '#268bd2'
 #theme: minima
 #theme: jekyll-theme-slate
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin    : "dark" #"dark"
+minimal_mistakes_skin    : "dark" #"default"
 
 # Plugins
 # ==============================================================================
