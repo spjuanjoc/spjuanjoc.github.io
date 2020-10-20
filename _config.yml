@@ -1,17 +1,19 @@
 # To deploy locally:
 # bundle; bundle update; bundle exec jekyll build
 # bundle exec jekyll serve
+# Configuration: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 
-title         : spjuanjoc.github.io
+title         : Juan José++
+subtitle      : subtítulo
 url           : "https://spjuanjoc.github.io/" 
 baseurl       : ""
 lang          : es
 encoding      : "utf-8"
 copyright     : copyright
-
+repository    : "spjuanjoc/spjuanjoc.github.io"
+locale        : es-CO
 description   : >-
   description
-
 tagline       : >-
   tag line
 
@@ -26,13 +28,13 @@ author:
   links:
     - label   : "GitHub"
       icon    : "fab fa-fw fa-github"
-      url     : "https://github.com/"
+      url     : "https://github.com/spjuanjoc"
 
 footer:
   links:
     - label   : "GitHub"
       icon    : "fab fa-fw fa-github"
-      url     : "https://github.com/"
+      url     : "https://github.com/spjuanjoc"
 
 github_username: spjuanjoc
 
@@ -45,7 +47,7 @@ minimal_mistakes_skin : "dark" #"default"
 # Plugins
 # ==============================================================================
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
   - jekyll-gist
   - jekyll-include-cache
   - jekyll-paginate
@@ -65,7 +67,7 @@ excerpt_separator: "\n\n"
 permalink     : /:categories/:title/
 paginate      : 5 # amount of posts to show
 paginate_path : /page:num/
-timezone      : CO # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone      : America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Include
 # ==============================================================================
