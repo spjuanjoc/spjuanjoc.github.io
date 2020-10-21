@@ -4,14 +4,14 @@
 # Configuration: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 
 title         : Juan José++
-subtitle      : subtítulo
+subtitle      : Juan José Castellanos
 url           : "https://spjuanjoc.github.io/" 
 baseurl       : ""
 lang          : es
+locale        : es-CO
 encoding      : "utf-8"
 copyright     : copyright
 repository    : "spjuanjoc/spjuanjoc.github.io"
-locale        : es-CO
 description   : >-
   description
 tagline       : >-
@@ -21,10 +21,11 @@ keywords      : []
 
 # Author
 # ==============================================================================
+github_username: spjuanjoc
 author:
-  name        : "First Lastname"
+  name        : "Juan José Castellanos"
   avatar      : "/assets/images/bio-photo.jpg"
-  bio         : "My awesome biography constrained to a sentence or two goes here."
+  bio         : "Ingeniero de Software. Entusiasta de C++."
   links:
     - label   : "GitHub"
       icon    : "fab fa-fw fa-github"
@@ -36,13 +37,11 @@ footer:
       icon    : "fab fa-fw fa-github"
       url     : "https://github.com/spjuanjoc"
 
-github_username: spjuanjoc
-
 # Build settings
 # ==============================================================================
-search        : false
+search                : false
 remote_theme          : "mmistakes/minimal-mistakes@4.20.2"
-minimal_mistakes_skin : "dark" #"default"
+minimal_mistakes_skin : "dark"
 
 # Plugins
 # ==============================================================================
@@ -56,18 +55,18 @@ plugins:
 
 # Conversion
 # ==============================================================================
-markdown      : kramdown
-highlighter   : rouge
-incremental   : false
-links         : false
-excerpt_separator: "\n\n"
+markdown          : kramdown
+highlighter       : rouge
+incremental       : false
+links             : false
+excerpt_separator : "\n\n"
 
 # Pagination to skip .../yyyy/mm/dd/...
 # ==============================================================================
-permalink     : /:categories/:title/
-paginate      : 5 # amount of posts to show
-paginate_path : /page:num/
-timezone      : America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink         : /:categories/:title/
+paginate          : 5 # amount of posts to show
+paginate_path     : /page:num/
+timezone          : America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Include
 # ==============================================================================
