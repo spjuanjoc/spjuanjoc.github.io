@@ -16,8 +16,10 @@ mantenga actualizado con un tiempo suficiente de revisión entre versiones.
 
 
 El estándar del lenguaje se divide en dos partes principales: 
-1. Las características del lenguaje.
-2. Las características de la biblioteca.
+1. Las características del [lenguaje](#características-del-lenguaje).
+2. Las características de la [biblioteca](#características-de-la-biblioteca).
+
+Ambas partes están agrupadas en una [lista](#lista-de-características).
 
 ## Características del lenguaje
 
