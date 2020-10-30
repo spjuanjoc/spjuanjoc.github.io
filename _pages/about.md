@@ -1,12 +1,13 @@
 ---
 permalink: /about/
 title: "Acerca de"
+author_profile: true
 ---
 
 La principal motivación de hacer publicaciones en este sitio está en poder 
 compartir un poco del conocimiento adquirido como Ingeniero de Software.
 
-La idea inicial es abarcar algunos conceptos generales de programación, principalmente
+La objetivo inicial es abarcar algunos conceptos generales de programación, principalmente
 en `C++ moderno` con `CMake`, incluyendo conceptos muy básicos, otros 
 cuantos intermedios y avanzados. También pretendo que los ejemplos tengan los
 mínimos requerimientos posibles, ya que es común encontrar que para 

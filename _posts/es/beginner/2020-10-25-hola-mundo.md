@@ -1,22 +1,27 @@
 ---
-title: "Hola Mundo"
-date: 2020-10-25T12:00:00-05:00
-last_modified_at: 2020-10-26T20:00:00-05:00
+title: "Hola Mundo C++"
+date: 2020-10-25
+last_modified_at: 2020-10-29
 categories:
   - Principiante
 tags:
   - C++
 ---
 
-"Hola mundo" en informática hace referencia al primer ejercicio a realizar a la hora
-de querer visualizar la sintaxis de un lenguaje de programación.
-Mi recomendación es buscar el ejemplo de "Hola mundo" de diversos lenguajes, analizar
-cuantos resultados aparecen, visualizar su sintaxis y decidir si es llamativo o no.
+"Hola mundo" en informática hace referencia al primer ejercicio que se hace 
+para visualizar la sintaxis de un lenguaje de programación.
+Es recomendable buscar el ejemplo de "Hola mundo" de diversos lenguajes, analizar
+cuantos resultados aparecen, visualizar su sintaxis, y decidir si es llamativo.
 
-Este ejemplo de Hola Mundo en C++ no requiere instalar ninguna IDE, ni compilador, ni línea de comandos; 
-tan solo usando un navegador de internet, y gracias a Matt Godbolt, es posible
-tener una herramienta para compilar en línea. Aunque existen varias, [godbolt.org](https://godbolt.org/) se
-ha convertido en una de las favoritas de la comunidad.
+Este ejemplo de Hola Mundo en C++ es el más sencillo que se me ocurrió; 
+no requiere instalar ninguna IDE, ni compilador, ni línea de comandos, 
+tan solo requiere un navegador de internet.
+Existen varios compiladores en línea, entre ellos [godbolt.org](https://godbolt.org/) (por Matt Godbolt),
+ el cual se ha convertido en uno de los favoritos de la comunidad de programadores de C++.
+
+## El código
+
+El siguiente código incrustrado es modificable y se compila automáticamente.
 
 <div>
 <iframe width="100%" height="400px" 
@@ -25,4 +30,17 @@ ha convertido en una de las favoritas de la comunidad.
 
 Arriba a la izquierda se puede apreciar el código fuente, a la derecha el resultado de la 
 ejecución, en el medio se observa el compilador y las opciones de compilación, 
-y en la parte inferior el código ensamblador.
+y en la parte inferior el código ensamblador. 
+
+## Explicación
+
+Todo programa ejecutable en C++ requiere una función principal (`main`) que define el punto
+de entrada del programa. Al ejecutarla retorna (`return`) un valor entero (`int`).
+
+Para poder ejecutar operaciones de entrada-salida estándar (_std i-o_), como mostrar un mensaje, 
+se requiere incluir (`#include`) el archivo de cabecera (`cstdio`) que contiene esa funcionalidad.
+Finalmente se ejecuta la operación de escritura (`puts`) del mensaje deseado "Hola Mundo". 
+
+Este código fuente se convierte a 10 instrucciones de código ensamblador, usa el compilador
+`gcc` en la versión más reciente disponible (_trunk_: `gcc >= 10.2`) para la arquitectura `x86_64`, con el 
+estándar `C++20`, y su ejecución finaliza exitosamente con el código `0`.
