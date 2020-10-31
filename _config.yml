@@ -3,61 +3,60 @@
 # bundle exec jekyll serve
 # Configuration: https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 
-title               : "Juan José++"
-subtitle            : "por Juan José Castellanos"
-url                 : "https://spjuanjoc.github.io"
-baseurl             : ""
-lang                : "es"
-locale              : "es-CO"
-encoding            : "utf-8"
-copyright           : "copyright"
-repository          : "spjuanjoc/spjuanjoc.github.io"
-description         : &description "Un sitio web sobre algunas de las cosas que he aprendido del lenguaje de programación `C++`"
-tagline             : "Un sitio web sobre algunas de las cosas que he aprendido del lenguaje de programación `C++`"
-teaser              : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title      : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs       : false # true, false (default)
-words_per_minute    : 190
-keywords            : [c++, C++, C++11, C++14, C++17, C++20, CMake]
+title                 : "Juan José++"
+#subtitle              : "por Juan José Castellanos"
+url                   : "https://spjuanjoc.github.io"
+baseurl               : ""
+lang                  : "es"
+locale                : "es-CO"
+encoding              : "utf-8"
+copyright             : "copyright"
+repository            : "spjuanjoc/spjuanjoc.github.io"
+description           : &description "Un sitio web sobre algunas de las cosas que he aprendido del lenguaje de programación `C++`"
+tagline               : "Un sitio web sobre algunas de las cosas que he aprendido del lenguaje de programación `C++`"
+logo                  : "/assets/icons/favicon-32x32.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+#teaser                : "/assets/images/site-logo.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+#masthead_title        : "some other masthead" # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs           : true # default: false
+words_per_minute      : 190
+keywords              : [c++, C++, C++11, C++14, C++17, C++20, CMake]
 
 # Author
 # ==============================================================================
-github_username     : spjuanjoc
+github_username       : spjuanjoc
 author:
-  name              : &name "Juan José Castellanos"
-  avatar            : "/assets/images/bio-photo.jpg"
-  bio               : "Ingeniero de Software. \n Entusiasta de C++."
-#  links:
-#    - label         : "GitHub"
-#      icon          : "fab fa-fw fa-github"
-#      url           : "https://github.com/spjuanjoc"
-#    - label: "Twitter"
-#      icon: "fab fa-fw fa-twitter-square"
-#      url: "https://twitter.com/mmistakes"
-
+  name                : &name "Juan José Castellanos"
+  avatar              : "/assets/images/bio-photo.jpg"
+  bio                 : "Ingeniero de Software. Entusiasta de C++."
+  links:
+    - label           : "GitHub"
+      icon            : "fab fa-fw fa-github"
+      url             : "https://github.com/spjuanjoc"
+    - label           : "email"
+      icon            : "fas fa-fw fa-envelope-square"
+      url             : "mailto:juanchocaste@gmail.com"
 footer:
-#  links:
-#    - label   : "GitHub"
-#      icon    : "fab fa-fw fa-github"
-#      url     : "https://github.com/spjuanjoc"
-#  - label: "Twitter"
-#    icon: "fab fa-fw fa-twitter-square"
-#    url: "https://twitter.com/mmistakes"
+  links:
+    - label           : "GitHub"
+      icon            : "fab fa-fw fa-github"
+      url             : "https://github.com/spjuanjoc"
+    - label           : "email"
+      icon            : "fas fa-fw fa-envelope-square"
+      url             : "mailto:juanchocaste@gmail.com"
 
 # Social Sharing
 # ==============================================================================
 twitter:
-  username               : &twitter "lejuanjowski"
+  username            : &twitter "lejuanjowski"
 
-og_image                 : "/assets/images/site-logo.png" # Open Graph/Twitter default site image
+og_image              : "/assets/icons/favicon-32x32.png" # Open Graph/Twitter default site image used for sharing preview
 # For specifying social profiles, used in _includes/seo.html
 # - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-    - "https://twitter.com/username"
+#social:
+#  type              : "some type" # Person or Organization (defaults to Person)
+#  name              : "some name" # If the user or organization name differs from the site's name
+#  links: # An array of links to social media profiles
+#    - "https://twitter.com/lejuanjowski"
 
 
 # Build settings
@@ -78,18 +77,18 @@ plugins:
 
 # Conversion
 # ==============================================================================
-markdown          : kramdown
-highlighter       : rouge
-incremental       : false
-links             : false
-excerpt_separator : "\n\n"
+markdown              : kramdown
+highlighter           : rouge
+incremental           : false
+links                 : false
+excerpt_separator     : "\n\n"
 
-# Pagination to skip .../yyyy/mm/dd/...
+# Pagination to skip the .../yyyy/mm/dd/... in the URI
 # ==============================================================================
-permalink         : /:categories/:title/
-paginate          : 5 # amount of posts to show
-paginate_path     : /page:num/
-timezone          : America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink             : /:categories/:title/
+paginate              : 5 # amount of posts to show
+paginate_path         : /page:num/
+timezone              : America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Include
 # ==============================================================================
@@ -104,35 +103,35 @@ defaults:
       path: ""
       type: posts
     values:
-      layout        : single
-      author_profile: false
-      read_time     : true
-      show_date     : true
-      comments      : true
-      share         : true
-      related       : true
+      layout          : single
+      author_profile  : false
+      read_time       : true
+      show_date       : true
+      comments        : true
+      share           : true
+      related         : true
   # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
-      layout        : single
-      author_profile: false
-      related       : false
+      layout          : single
+      author_profile  : false
+      related         : false
 
 # Archive
 # ==============================================================================
 category_archive:
-  type: liquid
-  path: /categories/
+  type                : liquid
+  path                : /categories/
 tag_archive:
-  type: liquid
-  path: /tags/
+  type                : liquid
+  path                : /tags/
 
 # HTML Compression
 # ==============================================================================
 # - http://jch.penibelst.de/
 compress_html:
-  clippings: all
+  clippings           : all
   ignore:
-    envs: development
+    envs              : development
