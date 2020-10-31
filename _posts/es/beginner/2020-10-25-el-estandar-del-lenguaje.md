@@ -1,7 +1,7 @@
 ---
 title: "El estándar del lenguaje"
-date: 2020-10-25T12:00:00-05:00
-last_modified_at: 2020-10-25T12:00:00-05:00
+date: 2020-10-25
+last_modified_at: 2020-10-26
 categories:
   - Principiante
 tags:
