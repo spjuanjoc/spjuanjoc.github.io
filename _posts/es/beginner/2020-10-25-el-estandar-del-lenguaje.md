@@ -1,7 +1,7 @@
 ---
 title: "El estándar del lenguaje"
-date: 2020-10-25T12:00:00-05:00
-last_modified_at: 2020-10-25T12:00:00-05:00
+date: 2020-10-25
+last_modified_at: 2020-10-26
 categories:
   - Principiante
 tags:
@@ -53,17 +53,20 @@ Binaria de Aplicación ABI.
 |Apache|libstdcxx|Unix|
 |Oracle|STLport|Unix|
 
-[comment]: <> (Windows: MFC?)
+La biblioteca usualmente es un paquete separado. En sistemas GNU/Linux y Unix la `libstdc++` 
+es usual que venga pre-instalada. 
 
-La biblioteca usualmente es un paquete separado. 
 En Ubuntu se puede obtener el número de la versión instalada con el comando `dpkg`: 
  
     $ dpkg -l | grep libstdc++
-    libstdc++6:amd64  8.4.0-1ubuntu1~  amd64  GNU Standard C++ Library v3
-    libstdc++6:i386   8.4.0-1ubuntu1~  i386   GNU Standard C++ Library v3
+    libstdc++6:amd64  8.4.0-1ubuntu1~18.04  amd64  GNU Standard C++ Library v3
+    libstdc++6:i386   8.4.0-1ubuntu1~18.04  i386   GNU Standard C++ Library v3
 
 ## Lista de características
 
 En la página de [Soporte de compiladores de C++](https://es.cppreference.com/w/cpp/compiler_support)
 se pueden apreciar todas las características agrupadas de acuerdo a la versión del
 estándar.
+
+---
+Acerca de [libstdc++](https://gcc.gnu.org/onlinedocs/libstdc++/faq.html)
