@@ -44,3 +44,7 @@ Finalmente se ejecuta la operación de escritura (`puts`) del mensaje deseado "H
 Este código fuente se convierte a 10 instrucciones de código ensamblador, usa el compilador
 `gcc` en la versión más reciente disponible (_trunk_: `gcc >= 10.2`) para la arquitectura `x86_64`, con el 
 estándar `C++20`, y su ejecución finaliza exitosamente con el código `0`.
+
+---
+## Fuente
+- [Conceptos básicos](https://es.cppreference.com/w/cpp/language/basic_concepts)

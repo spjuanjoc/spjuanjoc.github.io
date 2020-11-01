@@ -14,7 +14,6 @@ Un estándar de `C++` hace referencia a una versión aprobada por el comité
 se acordó aprobar un estándar cada tres años lo cual permite que el lenguaje se 
 mantenga actualizado con un tiempo suficiente de revisión entre versiones. 
 
-
 El estándar del lenguaje se divide en dos partes principales: 
 1. Las características del [lenguaje](#características-del-lenguaje).
 2. Las características de la [biblioteca](#características-de-la-biblioteca).
@@ -23,7 +22,7 @@ Ambas partes están agrupadas en una [lista](#lista-de-características).
 
 ## Características del lenguaje
 
-Las características del lenguaje corresponden a las funcionalidades del núcleo del lenguaje,
+Corresponden a las funcionalidades del núcleo del lenguaje,
 y su compatibilidad va ligada al compilador usado. Al avanzar la versión del 
 estándar saldrán nuevas versiones de un compilador que las contenga. 
 Por ejemplo el estándar `C++17` tiene la mayoría de sus características 
@@ -35,10 +34,9 @@ cubiertas en:
 |clang|6|Unix|
 |MSVC|19.0|Windows|
 
-
 ## Características de la biblioteca
 
-Las características de la biblioteca corresponden a todas las funcionalidades 
+Corresponden a todas las funcionalidades 
 y estructuras implementadas que se encuentran dentro del espacio de nombres `std` (`namespace std`), 
 incluyendo la biblioteca estándar de `C`, y la de Plantillas (`STL`).
 
@@ -69,4 +67,6 @@ se pueden apreciar todas las características agrupadas de acuerdo a la versión
 estándar.
 
 ---
-Acerca de [libstdc++](https://gcc.gnu.org/onlinedocs/libstdc++/faq.html)
+## Fuentes
+- [Soporte de compiladores de C++](https://es.cppreference.com/w/cpp/compiler_support)
+- [Biblioteca estándar GNU de C++](https://gcc.gnu.org/onlinedocs/libstdc++/faq.html)
