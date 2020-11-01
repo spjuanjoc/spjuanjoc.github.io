@@ -24,6 +24,7 @@ por Frank J Mitropoulus en Udemy.
 ## Blogs
 * Bartlomiej Filipek: [Bartek's coding blog ](https://www.bfilipek.com/)
 * Pablo Arias: [personal blog](https://pabloariasal.github.io/) 
+* Sy Brand: [TartanLlama blog](https://blog.tartanllama.xyz/)
 * Shahar Mike: [Web Spot](https://shaharmike.com/cpp/) 
 * Vishal Chovatiya: [personal blog](http://www.vishalchovatiya.com/) 
 
