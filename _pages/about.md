@@ -31,5 +31,5 @@ Algunos consejos de Brian Ruth para mantenerse al día con `C++` son:
 4. Enseñar un poco de lo que sabe.
 
 Este sitio es claramente el punto 4, así que sin más rodeos
-¿Por donde comenzar? Pues por [¡Hola Mundo!]({{ site.baseurl }}{% link _posts/es/beginner/2020-10-25-hola-mundo.md %})
+¿Por donde comenzar? Pues por [¡Hola Mundo!]({{ site.baseurl }}{% link _posts/es/principiante/2020-10-25-hola-mundo.md %})
 
