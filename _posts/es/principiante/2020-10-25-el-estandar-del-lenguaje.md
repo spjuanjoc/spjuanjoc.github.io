@@ -2,13 +2,18 @@
 title: "El estándar del lenguaje"
 date: 2020-10-25
 last_modified_at: 2020-10-26
+
 categories:
   - Principiante
 tags:
   - C++
+
+excerpt: "Un estándar de C++ hace referencia a una versión aprobada por el comité de estandarización. Al 2020 se han aprobado los estándares 98, 03, 11, 14, 17, y 20; estos números corresponden a los años de su aprobación."
+header:
+  teaser  : /assets/images/128px-ISO_C++_Logo.svg.png
 ---
 
-Un estándar de `C++` hace referencia a una versión aprobada por el comité 
+Un estándar de `C++` hace referencia a una versión aprobada por el comité de estandarización
 [ISO](https://isocpp.org/). Al 2020 se han aprobado los estándares 
 98, 03, 11, 14, 17, y 20; estos números corresponden a los años de su aprobación. Desde 2011
 se acordó aprobar un estándar cada tres años lo cual permite que el lenguaje se 

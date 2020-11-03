@@ -2,10 +2,15 @@
 title: "Hola Mundo C++"
 date: 2020-10-25
 last_modified_at: 2020-10-29
+
 categories:
   - Principiante
 tags:
   - C++
+
+excerpt: "Hola mundo en informática hace referencia al primer ejercicio que se hace para visualizar la sintaxis de un lenguaje de programación."
+header:
+  teaser  : /assets/images/book.jpg
 ---
 
 "Hola mundo" en informática hace referencia al primer ejercicio que se hace 
@@ -48,3 +53,4 @@ estándar `C++20`, y su ejecución finaliza exitosamente con el código `0`.
 ---
 ## Fuente
 - [Conceptos básicos](https://es.cppreference.com/w/cpp/language/basic_concepts)
+- Teaser photo by Jan Kahánek on Unsplash
