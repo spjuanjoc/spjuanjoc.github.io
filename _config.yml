@@ -49,18 +49,10 @@ footer:
 twitter:
   username            : &twitter "lejuanjowski"
 
-og_image              : /assets/icons/favicon-32x32.png # Open Graph/Twitter default site image used for sharing preview
-header:
-  image: /assets/icons/favicon-32x32.png
-  og_image: /assets/icons/favicon-32x32.png
-# For specifying social profiles, used in _includes/seo.html
-# - https://developers.google.com/structured-data/customize/social-profiles
-#social:
-#  type              : "some type" # Person or Organization (defaults to Person)
-#  name              : "some name" # If the user or organization name differs from the site's name
-#  links: # An array of links to social media profiles
-#    - "https://twitter.com/lejuanjowski"
-
+og_image              : /assets/icons/og-image-180x300.png # Open Graph/Twitter default site image used for sharing preview
+#header:
+#  image               : /assets/icons/og-image-180x300.png
+#  og_image            : /assets/icons/og-image-180x300.png
 
 # Build settings
 # ==============================================================================
