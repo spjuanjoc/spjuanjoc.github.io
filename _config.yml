@@ -14,7 +14,7 @@ copyright             : "copyright"
 repository            : "spjuanjoc/spjuanjoc.github.io"
 description           : &description "Un sitio web sobre algunas de las cosas que he aprendido del lenguaje de programación `C++`"
 tagline               : "Un sitio web sobre algunas de las cosas que he aprendido del lenguaje de programación `C++`"
-logo                  : "/assets/icons/favicon-32x32.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                  : "/assets/icons/og-image-180x300.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 #teaser                : "/assets/images/site-logo.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 #masthead_title        : "some other masthead" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs           : true # default: false
