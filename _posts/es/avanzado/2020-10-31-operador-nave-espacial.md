@@ -2,14 +2,17 @@
 title: "Operador «nave espacial»"
 date: 2020-10-31
 last_modified_at: 2020-10-31
+
 categories:
   - Avanzado
 tags:
   - C++20
   - STL
+
+excerpt: "Nave espacial es el nombre con el que se conoce al `operator<=>` introducido en el estándar `C++20`; hace referencia al operador de comparación de tres vías"
 header:
-  teaser    : /assets/icons/og-image-180x300.png
-  og_image  : /assets/icons/og-image-180x300.png
+  teaser  : /assets/images/space-invaders.png
+
 ---
 
 Nave espacial es el nombre con el que se conoce al `operator<=>` introducido
@@ -119,3 +122,4 @@ Todo el código se puede compilar en [godbolt.org](https://godbolt.org/).
 - [Comparaciones por defecto](https://es.cppreference.com/w/cpp/language/default_comparisons)
 - [C++ 20's Spaceship operator](https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/) por Cameron DaCamara.
 - [Spaceship operator](https://blog.tartanllama.xyz/spaceship-operator/) por Sy Brand.
+- Imágenes de [Flaticon](https://www.flaticon.com/), y [Unsplash](https://unsplash.com/).
