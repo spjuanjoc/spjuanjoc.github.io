@@ -35,7 +35,7 @@
 {%- assign page_large_image = page.header.og_image | absolute_url -%}
 {%- assign page_large_image = page_large_image | escape -%}
 
-{%- assign page_teaser_image = page.header.teaser | absolute_url -%}
+{%- assign page_teaser_image = page.header.teaser | default: site.og_image | absolute_url -%}
 {%- assign page_teaser_image = page_teaser_image | escape -%}
 
 {%- assign site_og_image = site.og_image | absolute_url -%}
@@ -67,9 +67,7 @@
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
-{% if site_og_image %}
-  <meta property="og:image" content="{{ site_og_image }}">
-{% elsif page_large_image %}
+{% if page_large_image %}
   <meta property="og:image" content="{{ page_large_image }}">
 {% elsif page_teaser_image %}
   <meta property="og:image" content="{{ page_teaser_image }}">
@@ -81,10 +79,7 @@
   <meta name="twitter:description" content="{{ seo_description }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
 
-  {% if site_og_image %}
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="{{ site_og_image }}">
-  {% elsif page_large_image %}
+  {% if page_large_image %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{{ page_large_image }}">
   {% else %}
@@ -136,9 +131,9 @@
     {% else %}
       "@type": "Person",
       "name": {{ site.social.name | default: site.name | jsonify }},
-      "url": {{ '/' | absolute_url |jsonify }}{% if site.og_image %}
-      "logo": {{ site_og_image | jsonify }}{% endif %}
-    {% endif %}
+      "url": {{ '/' | absolute_url |jsonify }}{% if site.social.links %},
+      "sameAs": {{ site.social.links | jsonify }}{% endif %}
+  {% endif %}
   }
 </script>
 
