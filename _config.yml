@@ -49,10 +49,11 @@ footer:
 twitter:
   username            : &twitter "lejuanjowski"
 
-og_image              : /assets/icons/og-image-180x300.png # Open Graph/Twitter default site image used for sharing preview
-#header:
+og_image              : "/assets/icons/og-image-180x300.png" # Open Graph/Twitter default site image used for sharing preview
+header:
+  og_image            : "/assets/icons/og-image-180x300.png"
+
 #  image               : /assets/icons/og-image-180x300.png
-#  og_image            : /assets/icons/og-image-180x300.png
 
 # Build settings
 # ==============================================================================
