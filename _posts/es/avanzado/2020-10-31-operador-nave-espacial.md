@@ -8,8 +8,9 @@ tags:
   - C++20
   - STL
 header:
-  og_image: /assets/icons/og-image-180x300.png
-  teaser: /assets/icons/og-image-180x300.png
+  teaser    : /assets/icons/og-image-180x300.png
+  image     : /assets/icons/favicon-32x32.png
+  og_image  : /assets/icons/og-image-180x300.png
 ---
 
 Nave espacial es el nombre con el que se conoce al `operator<=>` introducido

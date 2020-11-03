@@ -52,14 +52,16 @@ facebook:
   username            :
   app_id              :
   publisher           :
-og_image              : "/assets/icons/og-image-180x300.png" # Open Graph/Twitter default site image used for sharing preview
-#header:
-#  og_image            : "/assets/icons/og-image-180x300.png"
-#  image               : /assets/icons/og-image-180x300.png
+
+og_image              : /assets/icons/og-image-180x300.png # Open Graph/Twitter default site image used for sharing preview
+header:
+  og_image            : /assets/icons/og-image-180x300.png
+  image               : /assets/icons/og-image-180x300.png
+  teaser              : /assets/icons/og-image-180x300.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : "Person" # Person or Organization (defaults to Person)
+  type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
