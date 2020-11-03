@@ -1,6 +1,7 @@
 ---
-permalink: /about/
 title: "Acerca de"
+layout: home
+permalink: /about/
 author_profile: true
 ---
 

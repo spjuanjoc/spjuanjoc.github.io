@@ -1,6 +1,6 @@
 ---
 title: "Referencias"
-layout: categories
+layout: home
 permalink: /references/
 ---
 
@@ -11,7 +11,8 @@ permalink: /references/
 
 ## Libros
 * [Effective Modern C++](https://www.oreilly.com/library/view/effective-modern-c/9781491908419/) por Scott Meyers.
-
+* [C++17 - La guía completa](https://leanpub.com/cpp17es/) por Nicolai M. Josuttis, traducido a español
+por Javier Estrada.
 
 ## Cursos
 * [Beginning C++ programming](https://www.udemy.com/course/beginning-c-plus-plus-programming/)
