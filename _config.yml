@@ -31,7 +31,7 @@ author:
   links:
     - label           : "GitHub"
       icon            : "fab fa-fw fa-github"
-      url             : "https://github.com/spjuanjoc"
+      url             : "https://github.com/spjuanjoc/spjuanjoc.github.io"
     - label           : "email"
       icon            : "fas fa-fw fa-envelope-square"
       url             : "mailto:juanchocaste@gmail.com"
@@ -39,7 +39,7 @@ footer:
   links:
     - label           : "GitHub"
       icon            : "fab fa-fw fa-github"
-      url             : "https://github.com/spjuanjoc"
+      url             : "https://github.com/spjuanjoc/spjuanjoc.github.io"
     - label           : "email"
       icon            : "fas fa-fw fa-envelope-square"
       url             : "mailto:juanchocaste@gmail.com"
@@ -59,8 +59,8 @@ og_image              : /assets/icons/thumbnails-200x200.png # Open Graph/Twitte
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                : # Person or Organization (defaults to Person)
+  name                : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
 # Build settings

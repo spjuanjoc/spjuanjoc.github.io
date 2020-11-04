@@ -1,5 +1,5 @@
 ---
 title: "Publicaciones por año"
-permalink: /posts/
 layout: posts
+permalink: /posts/
 ---

@@ -1,5 +1,5 @@
 ---
 title: "Etiquetas"
-permalink: /tags/
 layout: tags
+permalink: /tags/
 ---
