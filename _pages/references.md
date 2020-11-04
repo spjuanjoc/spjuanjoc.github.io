@@ -37,3 +37,6 @@ por Frank J Mitropoulus en Udemy.
 * Sy Brand: [Live Compiler Development](https://youtu.be/Jw2n5QSul34) - Full talk - C++ on Sea 2020.
 
 ---
+- Imágenes de [Flaticon](https://www.flaticon.com/), y [Unsplash](https://unsplash.com/).
+
+---
