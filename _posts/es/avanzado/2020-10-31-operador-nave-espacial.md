@@ -122,4 +122,3 @@ Todo el código se puede compilar en [godbolt.org](https://godbolt.org/).
 - [Comparaciones por defecto](https://es.cppreference.com/w/cpp/language/default_comparisons)
 - [C++ 20's Spaceship operator](https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/) por Cameron DaCamara.
 - [Spaceship operator](https://blog.tartanllama.xyz/spaceship-operator/) por Sy Brand.
-- Imágenes de [Flaticon](https://www.flaticon.com/), y [Unsplash](https://unsplash.com/).

@@ -53,4 +53,3 @@ estándar `C++20`, y su ejecución finaliza exitosamente con el código `0`.
 ---
 ## Fuente
 - [Conceptos básicos](https://es.cppreference.com/w/cpp/language/basic_concepts)
-- Teaser photo by Jan Kahánek on Unsplash
