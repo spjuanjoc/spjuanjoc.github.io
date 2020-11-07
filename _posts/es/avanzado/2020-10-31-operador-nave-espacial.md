@@ -11,7 +11,7 @@ tags:
 
 excerpt: "Nave espacial es el nombre con el que se conoce al operador <=> introducido en el estándar C++20; hace referencia al operador de comparación de tres vías"
 header:
-  teaser  : /assets/images/space-invaders.png
+  teaser  : /assets/images/unsplash-john-baker-rocket.jpg
 
 ---
 
