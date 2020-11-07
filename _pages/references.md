@@ -2,6 +2,7 @@
 title: "Referencias"
 layout: home
 permalink: /references/
+entries_layout: grid
 ---
 
 ---

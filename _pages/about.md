@@ -3,6 +3,7 @@ title: "Acerca de"
 layout: home
 permalink: /about/
 author_profile: true
+entries_layout: grid
 ---
 
 La principal motivación de hacer publicaciones en este sitio está en poder 
