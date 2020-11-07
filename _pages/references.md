@@ -2,6 +2,7 @@
 title: "Referencias"
 layout: home
 permalink: /references/
+entries_layout: grid
 ---
 
 ---
@@ -24,19 +25,26 @@ por Frank J Mitropoulus en Udemy.
 
 ## Blogs
 * Bartlomiej Filipek: [Bartek's coding blog ](https://www.bfilipek.com/)
+* Jonathan Boccara: [Fluent c++](http://www.fluentcpp.com/)
 * Pablo Arias: [personal blog](https://pabloariasal.github.io/) 
 * Sy Brand: [TartanLlama blog](https://blog.tartanllama.xyz/)
 * Shahar Mike: [Web Spot](https://shaharmike.com/cpp/) 
 * Vishal Chovatiya: [personal blog](http://www.vishalchovatiya.com/) 
 
-## Algunos videos recomendados
+## Charlas completas
+
 * Erika Sweet: [Cross-Platform Pitfalls and How to Avoid Them](https://youtu.be/oYCin0B037Y) - Full talk - CppCon2020.
 * Julia Reid: [Collaborative C++ Development](https://youtu.be/qCn6zT76zTs) - Full talk - CppCon2020.
 * Kate Gregory [Core guidelines](https://youtu.be/XkDEzfpdcSg) - Full talk - CppCon2017.
-* Brian Ruth: [Drinking from the fire hose](https://youtu.be/kO-cNY8nX70) - Lightning talk - CppCon2020.
 * Sy Brand: [Live Compiler Development](https://youtu.be/Jw2n5QSul34) - Full talk - C++ on Sea 2020.
 
+## Charlas cortas
+
+* Brian Ruth: [Drinking from the fire hose](https://youtu.be/kO-cNY8nX70) - Lightning talk - CppCon2020.
+* Javier Estrada [If You Build It, Will They Come?](https://youtu.be/I8lVKve_bEk) - Lightning talk - CppCon2020.
+
 ---
+## Imágenes
 - Imágenes de [Flaticon](https://www.flaticon.com/), y [Unsplash](https://unsplash.com/).
 
 ---
