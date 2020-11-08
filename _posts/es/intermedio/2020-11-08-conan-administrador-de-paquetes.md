@@ -41,11 +41,14 @@ plataforma, y de una manera un poco más automatizada. Solo se requiere crear un
 archivo `conanfile.txt` con los paquetes a utilizar en el cual se le indica 
 la versión a usar.
 
-Los siguientes ejemplos muestran cómo usar _conan_ en un proyecto `CMake`:
+Los siguientes ejemplos muestran cómo usar _conan_ para utilizar bibliotecas de terceros en un proyecto `CMake`:
 
 ## googletest
 
-Es el _framework_ de pruebas de google. Los pasos a seguir son:
+Es el _framework_ de pruebas de google. Es usado para crear 
+pruebas unitarias, _fixtures_, _mocks_, entre otros. Tiene dos 
+componentes principales: _gtest_ y _gmock_. 
+Los pasos a seguir son:
 
 1. Crear el archivo `conanfile.txt`. Se incluye la versión de _gtest_ requerida,
 y el generador con el que se va a compilar. 
@@ -98,11 +101,14 @@ y el generador con el que se va a compilar.
 
 ## Catch2
 
-Para usar el _framework_ de pruebas _Catch2_ basta con agregarlo al `conanfile.txt`
+Es otro _framework_ de pruebas, liviano, nativo de 
+`C++` moderno, con opción de hacer _micro-bemchmarking_,
+ ideal para BDD y TDD. 
+Para usar _Catch2_ basta con agregarlo al `conanfile.txt`
 
     catch2/2.13.3
 
-Agregar la configuración básica de _conan_ al `CMakeLists.txt`:
+Incluir la configuración básica de _conan_ en el `CMakeLists.txt`:
 
     include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
     conan_basic_setup()
@@ -120,7 +126,7 @@ Finalmente, en el programa incluir el archivo de cabecera:
 
 ## Boost Property Tree
 
-Con _Boost_ hay que tener algunas consideraciones extra. 
+Con _Boost_ hay que tener algunas consideraciones adicionales. 
 La primera es que se pueden usar sub-paquetes de boost por separado gracias a 
 que se encuentran alojados en el repositorio de _bincrafters_.
 En este ejemplo se selecciona únicamente Boost.PropertyTree (incluye sus dependencias)
