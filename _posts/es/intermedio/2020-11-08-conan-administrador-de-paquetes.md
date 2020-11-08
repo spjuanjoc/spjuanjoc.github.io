@@ -102,7 +102,7 @@ y el generador con el que se va a compilar.
 ## Catch2
 
 Es otro _framework_ de pruebas, liviano, nativo de 
-`C++` moderno, con opción de hacer _micro-bemchmarking_,
+`C++` moderno, con opción de hacer _micro-benchmarking_,
  ideal para BDD y TDD. 
 Para usar _Catch2_ basta con agregarlo al `conanfile.txt`
 
