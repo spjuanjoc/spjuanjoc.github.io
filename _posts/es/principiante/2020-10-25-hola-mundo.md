@@ -1,6 +1,6 @@
 ---
-title: "Hola Mundo C++"
-date: 2020-10-25
+title           : "Hola Mundo C++"
+date            : 2020-10-25
 last_modified_at: 2020-10-29
 
 categories:
@@ -11,6 +11,7 @@ tags:
 excerpt: "Hola mundo en informática hace referencia al primer ejercicio que se hace para visualizar la sintaxis de un lenguaje de programación."
 header:
   teaser  : /assets/images/unsplash-danielle-macinnes-begin.jpg
+
 ---
 
 "Hola mundo" en informática hace referencia al primer ejercicio que se hace 
