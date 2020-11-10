@@ -1,14 +1,15 @@
 ---
-title: "Conan como administrador de paquetes"
-date: 2020-11-08
+title           : "Conan como administrador de paquetes"
+date            : 2020-11-08
 last_modified_at: 2020-11-08
 
 categories:
   - Intermedio
 tags:
-  - administración de paquetes
+  - paquetes
   - C++
   - CMake
+  - conan
 
 excerpt: "Conan es un administrador de paquetes multiplataforma, descentralizado, y de código abierto, que permite crear y compartir paquetes de software para C/C++"
 header:

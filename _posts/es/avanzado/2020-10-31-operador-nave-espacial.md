@@ -1,6 +1,6 @@
 ---
-title: "Operador «nave espacial»"
-date: 2020-10-31
+title           : "Operador «nave espacial»"
+date            : 2020-10-31
 last_modified_at: 2020-10-31
 
 categories:
