@@ -87,7 +87,7 @@ es: &DEFAULT_ES
   comments_title             : "Comentarios"
   more_label                 : "Ver más"
   related_label              : "Puede que también te interese:"
-  follow_label               : "Seguir:"
+  follow_label               : "Más:"
   feed_label                 : "Feed"
   powered_by                 : "Funciona con:"
   website_label              : "Sitio web"
