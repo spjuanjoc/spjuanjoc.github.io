@@ -27,7 +27,7 @@ github_username       : spjuanjoc
 author:
   name                : &name "Juan José Castellanos"
   avatar              : "/assets/images/bio-photo.jpg"
-  bio                 : "Ingeniero de Software. Entusiasta de C++."
+  bio                 : "Ingeniero de Software. Entusiasta de C++"
   links:
     - label           : "GitHub"
       icon            : "fab fa-fw fa-github"
@@ -66,10 +66,9 @@ social:
 # Comments
 # ==============================================================================
 comments:
-  provider: "disqus"
+  provider            : "disqus"
   disqus:
-    shortname: "spjuanjoc"
-
+    shortname         : "spjuanjoc"
 
 # Build settings
 # ==============================================================================
@@ -95,9 +94,18 @@ incremental           : false
 links                 : false
 excerpt_separator     : "\n\n"
 
-# Pagination to skip the .../yyyy/mm/dd/... in the URI
+# Archive
 # ==============================================================================
-permalink             : /:categories/:title/
+category_archive:
+  type                : liquid
+  path                : /categories/
+tag_archive:
+  type                : liquid
+  path                : /tags/
+
+# Pagination
+# ==============================================================================
+permalink             : /:categories/:title/ # to skip the .../yyyy/mm/dd/... in the URI
 paginate              : 5 # amount of posts to show
 paginate_path         : /page:num/
 timezone              : America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -133,15 +141,6 @@ defaults:
       layout          : single
       author_profile  : false
       related         : false
-
-# Archive
-# ==============================================================================
-category_archive:
-  type                : liquid
-  path                : /categories/
-tag_archive:
-  type                : liquid
-  path                : /tags/
 
 # HTML Compression
 # ==============================================================================
