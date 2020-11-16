@@ -13,7 +13,7 @@ tags:
 
 excerpt: "Conan es un administrador de paquetes multiplataforma, descentralizado, y de código abierto, que permite crear y compartir paquetes de software para C/C++"
 header:
-  teaser  : /assets/images/conan-el-barbaro.jpg
+  teaser  : /assets/images/unsplash-curology-dog-package.jpg
 
 ---
 
