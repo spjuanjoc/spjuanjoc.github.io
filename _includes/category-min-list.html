@@ -11,15 +11,27 @@
     <!-- Sort alphabetically regardless of case e.g. a B c d E -->
     <!-- modified from http://www.codeofclimber.ru/2015/sorting-site-tags-in-jekyll/ -->
   {% endcomment %}
-  {% capture page_categories %}{% for category in page.categories %}{{ category | downcase }}|{{ category }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-  {% assign category_hashes = page_categories | split: ',' | sort %}
 
-    <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i>
+  {% capture doc_categories %}{% for category in document.categories %}{{ category | downcase }}|{{ category }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+  {% assign doc_category_hashes = doc_categories | split: ',' | sort %}
+
+    <i class="fas fa-fw fa-clipboard-list" aria-hidden="true"></i>
     <span itemprop="keywords">
-    {% for hash in category_hashes %}
+    {% for hash in doc_category_hashes %}
       {% assign keyValue = hash | split: '|' %}
       {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-      <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep"></span>{% endunless %}
+      <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}"
+         style="display: inline-block;
+                  padding: 0 4px;
+                  border: 1px solid #b6b6b6;
+                  border-radius: 4px;
+                  text-decoration: none;"
+         rel="tag">
+        {{ category_word }}
+      </a>
+      {% unless forloop.last %}
+        <span class="sep"></span>
+      {% endunless %}
     {% endfor %}
     </span>
 
