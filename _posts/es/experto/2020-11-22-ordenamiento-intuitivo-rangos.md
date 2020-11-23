@@ -1,5 +1,5 @@
 ---
-title           : "Ordenamiento intuitivo con la biblioteca de Rangos"
+title           : "Ordenamiento intuitivo"
 date            : 2020-11-22
 last_modified_at: 2020-11-23
 
