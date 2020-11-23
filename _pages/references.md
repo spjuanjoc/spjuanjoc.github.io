@@ -7,6 +7,14 @@ entries_layout: grid
 
 ---
 
+En esta sección no pretendo recomendar todos los libros habidos y por haber
+relacionados con la programación en `C++`, más bien unos cuantos blogs, y charlas
+en conferencias que me han parecido útiles e interesantes. De todos modos también
+incluyo la documentación oficial en español, un par de libros recientes (>2014),
+y un curso introductorio bastante completo. De nuevo, casi todo está en inglés.
+Finalmente, incluyo la referencia de las imágenes de miniaturas.
+
+
 ## Documentación oficial:
 * [Cpp Reference](https://es.cppreference.com/)
 
@@ -25,7 +33,9 @@ por Frank J Mitropoulus en Udemy.
 
 ## Blogs
 * Bartlomiej Filipek: [Bartek's coding blog ](https://www.bfilipek.com/)
+* Include Cpp: [#include <c++>](https://www.includecpp.org/)
 * Jonathan Boccara: [Fluent c++](http://www.fluentcpp.com/)
+* Kate Gregory: [Kate's blog](http://www.gregcons.com/kateblog/)
 * Pablo Arias: [personal blog](https://pabloariasal.github.io/) 
 * Sy Brand: [TartanLlama blog](https://blog.tartanllama.xyz/)
 * Shahar Mike: [Web Spot](https://shaharmike.com/cpp/) 
@@ -45,6 +55,6 @@ por Frank J Mitropoulus en Udemy.
 
 ---
 ## Imágenes
-- Imágenes de [Flaticon](https://www.flaticon.com/), y [Unsplash](https://unsplash.com/).
+- Imágenes de [https://unsplash.com/](https://unsplash.com/).
 
 ---
