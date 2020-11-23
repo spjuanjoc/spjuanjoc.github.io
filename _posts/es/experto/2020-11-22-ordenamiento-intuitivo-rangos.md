@@ -11,28 +11,30 @@ tags:
 
 excerpt: "La biblioteca de rangos incluida en C++20 trae finalmente 
 una manera intuitiva y fácil de comprender para realizar ordenamientos 
-en contenedores de la STL."
+en contenedores secuenciales de la STL."
 header:
   teaser  : /assets/images/unsplash-fleur-scales.jpg
 
 ---
 
-Una forma sencilla de ordenar un contenedor, siempre y cuando éste 
+Una forma sencilla de ordenar un contenedor secuencial, siempre y cuando éste 
 soporte iteradores de acceso aleatorio, es por medio del algoritmo `std::sort`. 
-Usando el método de comparación predefinida el ordenamiento es tan simple como 
+Para contenedores como `std::array`, `std::deque`, y `std::vector`,
+usando el método de comparación predefinida, el ordenamiento es tan simple como 
 indicarle al algoritmo dónde comienza y dónde termina el contenedor:
 
 ```c++
   std::sort(std::begin(contenedor), std::end(contenedor));
 ```
 
-Los contenedores `std::list` y `std::forward_list` no soportan iteradores de acceso
-aleatorio, por lo cual tienen definidos sus propios algoritmos de ordenamiento.
+Los contenedores secuenciales `std::list` y `std::forward_list` no soportan 
+iteradores de acceso aleatorio, por lo cual tienen definidos sus propios 
+algoritmos de ordenamiento.
 
 ## Biblioteca de Rangos
 
 Esta biblioteca se puede entender como una versión avanzada de la biblioteca
-de plantillas (`STL`). Aunque no es 100 % compatible con las versiones anteriores
+de plantillas (`STL`). Aunque no es `100 %` compatible con las versiones anteriores
 contiene una cantidad importante de nuevas características, y la mayoría de ellas
 están en un _namespace_ independiente: `std::ranges`, lo que implica que el código
 anterior a esta biblioteca no se verá afectado.
@@ -44,12 +46,8 @@ un `std::vector` será tratado como un rango. La biblioteca de Rangos opera sobr
 rangos, claramente, entonces un algoritmo de esta biblioteca podrá operar sobre 
 un `std::vector`.
 
-La biblioteca abarca los siguientes temas:  
-- Conceptos
-- Algoritmos optimizados
-- Centinelas
-- Proyecciones
-- Vistas
+La biblioteca abarca temas relacionados con Conceptos, Algoritmos optimizados, 
+Centinelas, Proyecciones, y Vistas.
 
 ## Ordenamiento de rangos
 
@@ -77,13 +75,30 @@ Teniendo:
   std::ranges::sort(lista);
 ```
 
-Al intentar compilar saldrá un mensaje de error que contiene:
+Al intentar compilar saldrá un mensaje de error similar al siguiente:
 ```c++
-.../include/c++/11.0.0/algorithm:64,
-  from <source>:1:
-.../c++/11.0.0/bits/ranges_algo.h:2019:7: note: candidate: 
-  template<class _Iter, class _Sent, class _Comp, class _Proj>  
-   requires (random_access_iterator<_Iter>) 
+<source>: In function 'int main()':
+<source>:19:22: error: 
+  no match for call to '(const std::ranges::__sort_fn) (std::__cxx11::list<int>&)'
+   19 |   std::ranges::sort(lista);
+      |                          ^
+In file included from /include/c++/11.0.0/algorithm:64,
+                 from <source>:1:
+/include/c++/11.0.0/bits/ranges_algo.h:2019:7: 
+  note: candidate: 'template<...>  requires (random_access_iterator<_Iter>) && ...'
+ 2019 |       operator()(...,
+      |       ^~~~~~~~
+/include/c++/11.0.0/bits/ranges_algo.h:2019:7: 
+  note:   template argument deduction/substitution failed:
+<source>:19:22: note:   candidate expects 4 arguments, 1 provided
+   19 |   std::ranges::sort(lista);
+      |                          ^
+In file included from /include/c++/11.0.0/algorithm:64,
+                 from <source>:1:
+/include/c++/11.0.0/bits/ranges_algo.h:2032:7: 
+  note: candidate: 'template<...>  requires (random_access_range<_Range>) && ...'
+ 2032 |       operator()(...) const
+      |       ^~~~~~~~
 ```
 
 La parte del mensaje que indica que no se cumplen las condiciones para el uso 
@@ -131,8 +146,7 @@ El resultado del ordenamiento será primero por edad y luego por nombre:
 La biblioteca de rangos está disponible en:
 - Estándar: `-std=C++20`, `-std=gnu++2a` o `-std=c++2a`, con biblioteca: `libstdc++ 2020`. 
 - Versión del compilador: `gcc > '10.2'`
-
-Todo el código se puede compilar en [godbolt.org](https://godbolt.org/).
+- Como terceros en Range-V3.
 
 ## Fuentes
 - Hannes Hauswedell: [A beginner's guide to C++ Ranges](https://hannes.hauswedell.net/post/2019/11/30/range_intro/)
