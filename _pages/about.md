@@ -17,14 +17,30 @@ escribir un ejemplo simple en `C++` hay que tener instalados varios programas, d
 herramientas, en general varios requerimientos que desmotivan a alguien que
 esté iniciando a conocer el lenguaje.
 
-[comment]: <> (Hay demasiadas posibilidades para de resolver un problema, y a veces no se sabe por donde empezar.)
 
-La documentación en español no es tan abuntante como la que está en inglés; [Javier Estrada](https://youtu.be/I8lVKve_bEk) 
-es una de las personas que ha estado 
+La documentación en español no es tan abundante como la que está en inglés; 
+[Javier Estrada](https://youtu.be/I8lVKve_bEk) es una de las personas que ha estado 
 motivando a la comunidad hispanohablante para aumentar la documentación 
 disponible en español, entre otras ayudando a adecuar la 
 traducción de la [documentación oficial](https://es.cppreference.com/) y mantenerla al día. 
 Ampliar esta documentación es otra de las motivaciones. 
+
+
+## Comentarios con Disqus
+
+En todas las publicaciones es posible dejar comentarios, tanto como usuario
+de _disqus_, como invitado usando un correo electrónico, 
+siguiendo los pasos que se muestran en la imagen:
+
+![disqus-guest](/assets/screenshots/disqus-guest.png)
+
+## Visitas y publicidad
+
+El público objetivo del sitio es básicamente yo mismo, así que no tengo intención 
+de medir estadísticas de visitas; por lo tanto el sitio no contendrá publicidad
+ni rastreo de _analytics_.
+
+## Manos a la obra
 
 Algunos consejos de Brian Ruth para mantenerse al día con `C++` son:
 1. Aceptar que hay demasiados temas como para conocerlos todos.
