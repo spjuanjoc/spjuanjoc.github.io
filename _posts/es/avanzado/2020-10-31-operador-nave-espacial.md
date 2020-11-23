@@ -66,8 +66,8 @@ struct S {
 
 El compilador generará todas las comparaciones por defecto.
 El tipo de retorno podría ser `bool`, sin embargo es conveniente dejarlo como 
-`auto` para tener en cuenta el ordenamiento, del que probablemente escriba en 
-una publicación futura. 
+`auto` para tener en cuenta el ordenamiento, del cual hablo en la publicación
+sobre [ordenamiento intuitivo]({{ site.baseurl }}{% link _posts/es/experto/2020-11-22-ordenamiento-intuitivo-rangos.md %}).
 
 ## Usos
 
