@@ -10,7 +10,11 @@ tags:
 
 excerpt: "Hola mundo en informática hace referencia al primer ejercicio que se hace para visualizar la sintaxis de un lenguaje de programación."
 header:
-  teaser  : /assets/images/unsplash-danielle-macinnes-begin.jpg
+  teaser        : /assets/images/unsplash-danielle-macinnes-begin.jpg
+  overlay_image : /assets/images/unsplash-danielle-macinnes-begin.jpg
+  overlay_filter: 0.5
+  caption       : "Imagen por: [**Danielle MacInnes**](https://unsplash.com/@dsmacinnes?utm_source=unsplash) 
+                  en [**Unsplash**](https://unsplash.com/?utm_source=unsplash)"
 
 ---
 

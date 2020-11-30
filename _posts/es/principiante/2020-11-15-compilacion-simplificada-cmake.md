@@ -12,7 +12,11 @@ tags:
 excerpt: "CMake es una herramienta para controlar el proceso de compilación 
           de software de una manera simple, independiente de la plataforma."
 header:
-  teaser  : /assets/images/unsplash-fiona-feng-gears.jpg
+  teaser        : /assets/images/unsplash-fiona-feng-gears.jpg
+  overlay_image : /assets/images/unsplash-fiona-feng-gears.jpg
+  overlay_filter: 0.5
+  caption       : "Imagen por: [**Fiona Feng**](https://unsplash.com/@moonai?utm_source=unsplash) 
+                  en [**Unsplash**](https://unsplash.com/?utm_source=unsplash)"
 
 ---
 

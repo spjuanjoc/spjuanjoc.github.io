@@ -11,7 +11,11 @@ tags:
 excerpt: "Una clase vacía es aquella que no contiene variables miembro, y contiene
 por lo menos una función miembro."
 header:
-  teaser  : /assets/images/unsplash-kaleb-nimz-empty-chair.jpg
+  teaser        : /assets/images/unsplash-kaleb-nimz-empty-chair.jpg
+  overlay_image : /assets/images/unsplash-kaleb-nimz-empty-chair.jpg
+  overlay_filter: 0.5
+  caption       : "Imagen por: [**Kaleb Nimz**](https://unsplash.com/@kalebnimz?utm_source=unsplash) 
+                  en [**Unsplash**](https://unsplash.com/?utm_source=unsplash)"
 
 ---
 

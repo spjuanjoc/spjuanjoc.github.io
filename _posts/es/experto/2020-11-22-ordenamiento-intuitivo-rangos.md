@@ -13,7 +13,11 @@ excerpt: "La biblioteca de rangos incluida en C++20 trae finalmente
 una manera intuitiva y fácil de comprender para realizar ordenamientos 
 en contenedores secuenciales de la STL."
 header:
-  teaser  : /assets/images/unsplash-fleur-scales.jpg
+  teaser        : /assets/images/unsplash-fleur-scales.jpg
+  overlay_image : /assets/images/unsplash-fleur-scales.jpg
+  overlay_filter: 0.5
+  caption       : "Imagen por: [**Fleur**](https://unsplash.com/@yer_a_wizard?utm_source=unsplash) 
+                  en [**Unsplash**](https://unsplash.com/?utm_source=unsplash)"
 
 ---
 
@@ -76,7 +80,7 @@ Teniendo:
 ```
 
 Al intentar compilar saldrá un mensaje de error similar al siguiente:
-```c++
+```
 <source>: In function 'int main()':
 <source>:19:22: error: 
   no match for call to '(const std::ranges::__sort_fn) (std::__cxx11::list<int>&)'
