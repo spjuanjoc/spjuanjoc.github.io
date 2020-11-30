@@ -17,7 +17,6 @@ escribir un ejemplo simple en `C++` hay que tener instalados varios programas, d
 herramientas, en general varios requerimientos que desmotivan a alguien que
 esté iniciando a conocer el lenguaje.
 
-
 La documentación en español no es tan abundante como la que está en inglés; 
 [Javier Estrada](https://youtu.be/I8lVKve_bEk) es una de las personas que ha estado 
 motivando a la comunidad hispanohablante para aumentar la documentación 
@@ -25,6 +24,21 @@ disponible en español, entre otras ayudando a adecuar la
 traducción de la [documentación oficial](https://es.cppreference.com/) y mantenerla al día. 
 Ampliar esta documentación es otra de las motivaciones. 
 
+## Distribución de las publicaciones en este sitio
+
+Las publicaciones en este sitio se agrupan en las siguientes pestañas:
+- Publicaciones: Corresponden a todas las publicaciones agrupadas por año y 
+ordenadas por fecha, donde las que están más arriba son las creadas o 
+modificadas más recientemente.
+- Categorías: Corresponden a los que yo considero como los niveles de 
+compresión mínimos sugeridos para los temas tratados, tales como:
+    - Principiante
+    - Intermedio
+    - Avanzado
+- Etiquetas: Corresponden a los temas principales tratados en una publicación, tales como:
+    - CMake
+    - C++
+    - STL
 
 ## Comentarios con Disqus
 
