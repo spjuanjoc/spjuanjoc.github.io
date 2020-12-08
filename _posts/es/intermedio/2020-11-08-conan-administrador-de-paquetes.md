@@ -21,7 +21,7 @@ header:
 
 ---
 
-Un aspecto clave al trabajar con bibliotecas de terceros en cualquer lenguaje 
+Un aspecto clave al trabajar con bibliotecas de terceros en cualquier lenguaje 
 de programación es la facilidad para administrar paquetes.
 En cuanto a `C` y `C++` actualmente no hay un administrador incluido en el 
 estándar, sin embargo existen varias opciones externas entre las que destacan 
