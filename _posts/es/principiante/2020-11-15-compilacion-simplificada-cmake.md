@@ -107,8 +107,8 @@ modificar sin necesidad de cambiar el archivo `CMakeLists.txt`:
 # CMakeLists.txt
 #...
 # Options
-option(ENABLE_TESTS       "Habilitar compilación de pruebas" OFF)
-option(ENABLE_CONAN       "Habilitar Conan" OFF)
+option(ENABLE_TESTS       "Habilitar compilación de pruebas" False)
+option(ENABLE_CONAN       "Habilitar Conan" False)
 #...
 ```
 
@@ -117,7 +117,7 @@ dependiendo de la configuración requerida. Por ejemplo para una configuración 
 se podría dejar sin habilitar la compilación de pruebas, pero para una configuración
 en modo _debug_ habilitarlas:
 
-    cmake .. -DENABLE_TESTS=ON
+    cmake .. -DENABLE_TESTS=True
 
 
 ## Subdirectorios
@@ -154,7 +154,7 @@ sistema de control de versiones.
 Para un sistema GNU/Linux con Ubuntu, para el proyecto `hola_cmake` se puede crear el
 directorio `./cmake-build/`  desde el cual se ejecuta el comando de generación:
 
-    cmake .. -G "Unix Makefiles" -DENABLE_TESTS=ON 
+    cmake .. -G "Unix Makefiles" -DENABLE_TESTS=True
 
 Donde `"Unix Makefiles"` es el generador elegido.  
 
