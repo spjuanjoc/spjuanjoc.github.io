@@ -11,7 +11,9 @@ tags:
   - CMake
   - conan
 
-excerpt: "Conan es un administrador de paquetes multiplataforma, descentralizado, y de código abierto, que permite crear y compartir paquetes de software para C/C++"
+excerpt: "Conan es un administrador de paquetes multiplataforma, descentralizado, 
+          y de código abierto, que permite crear y compartir paquetes de software 
+          para C/C++"
 header:
   teaser        : /assets/images/unsplash-curology-dog-package.jpg
   overlay_image : /assets/images/unsplash-curology-dog-package.jpg
@@ -21,7 +23,7 @@ header:
 
 ---
 
-Un aspecto clave al trabajar con bibliotecas de terceros en cualquer lenguaje 
+Un aspecto clave al trabajar con bibliotecas de terceros en cualquier lenguaje 
 de programación es la facilidad para administrar paquetes.
 En cuanto a `C` y `C++` actualmente no hay un administrador incluido en el 
 estándar, sin embargo existen varias opciones externas entre las que destacan 
@@ -76,20 +78,20 @@ y el generador con el que se va a compilar.
     - Agregar la configuración básica de conan
 
     ````
-        conan_basic_setup()
+    conan_basic_setup()
    ````
 
     - Enlazar las bibliotecas de _googletest_: _gtest_ y _gmock_
 
     ````
-        target_link_libraries(HolaMundo ${CONAN_LIBS})
+    target_link_libraries(HolaMundo ${CONAN_LIBS})
     ````
 
     También es posible enlazar por separado _gtest_ y _gmock_ en lugar de usar la variable `${CONAN_LIBS}`. 
 
     ````
-        conan_basic_setup(TARGETS)
-        target_link_libraries(HolaMundo CONAN_PKG::gtest)
+    conan_basic_setup(TARGETS)
+    target_link_libraries(HolaMundo CONAN_PKG::gtest)
     ````
 
 3. Usar en el proyecto incluyendo el archivo de cabecera:
