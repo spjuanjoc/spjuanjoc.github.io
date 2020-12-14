@@ -1,7 +1,7 @@
 ---
 title           : "Operador «nave espacial»"
 date            : 2020-10-31
-last_modified_at: 2020-10-31
+last_modified_at: 2020-12-14
 
 categories:
   - Avanzado
@@ -128,3 +128,4 @@ Todo el código se puede compilar en [godbolt.org](https://godbolt.org/).
 - [Comparaciones por defecto](https://es.cppreference.com/w/cpp/language/default_comparisons)
 - [C++ 20's Spaceship operator](https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/) por Cameron DaCamara.
 - [Spaceship operator](https://blog.tartanllama.xyz/spaceship-operator/) por Sy Brand.
+- [C++20 comparisons](https://blog.jetbrains.com/rscpp/2020/12/10/cpp20-comparisons/) por JetBrains
