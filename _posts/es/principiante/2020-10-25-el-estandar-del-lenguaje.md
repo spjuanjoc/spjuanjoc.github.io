@@ -8,7 +8,10 @@ categories:
 tags:
   - C++
 
-excerpt: "Un estándar de C++ hace referencia a una versión aprobada por el comité de estandarización. Al 2020 se han aprobado los estándares 98, 03, 11, 14, 17, y 20; estos números corresponden a los años de su aprobación."
+excerpt: "Un estándar de C++ hace referencia a una versión aprobada por el 
+          comité de estandarización. Al 2020 se han aprobado los estándares 
+          98, 03, 11, 14, 17, y 20; estos números corresponden a los años de su
+          aprobación."
 header:
   teaser        : /assets/images/unsplash-siavosh-hosseini-meeting.jpg
   overlay_image : /assets/images/unsplash-siavosh-hosseini-meeting.jpg
