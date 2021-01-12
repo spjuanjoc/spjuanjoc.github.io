@@ -14,7 +14,7 @@ excerpt: "Un _stream_ es un canal de flujo de datos; el operador de inserción
 header:
   teaser        : /assets/images/unsplash-vlad-tchompalov-stream.jpg
   overlay_image : /assets/images/unsplash-vlad-tchompalov-stream.jpg
-  overlay_filter: 0.0
+  overlay_filter: 0.25
   caption       : "Imagen por: [**Vlad Tchompalov**](https://unsplash.com/@tchompalov?utm_source=unsplash) 
                   en [**Unsplash**](https://unsplash.com/?utm_source=unsplash)"
 
