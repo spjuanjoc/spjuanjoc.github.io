@@ -71,20 +71,20 @@ posición.
     fmt::format("{0}{1}{0}", "abra", "cad");     // "abracadabra"
     ```
 
-2. Alineamiento del texto: izquierda, derecha, centro.
+2. Alineamiento del texto: izquierda, derecha, centro, con ancho fijo o dinámico.
 
     ```c++
-    fmt::format("{:<30}", "alineado a la izquierda");
+    fmt::format("{:<30}", "alineado a la izquierda"); // fijo
     // "alineado a la izquierda       "
     
     fmt::format("{:<{}}", "alineado a la izquierda", 30); // dinámico
     // "alineado a la izquierda       "
     ```
 
-3. Precisión en flotantes:
+3. Precisión en flotantes: fija o dinámica
 
     ```c++
-    fmt::print("{:.{}f}", 3.14159265359, 1);
+    fmt::print("{:.1f}", 3.14159265359); // fija
     // "3.1"
     
     fmt::print("{:.{}f}", 3.14159265359, 4); // dinámica
