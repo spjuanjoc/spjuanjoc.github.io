@@ -25,46 +25,119 @@ es una biblioteca `ANSI C` para crear bases de datos de tamaño reducido, que pu
 ser usadas por ejemplo en dispositivos móviles.
 Su compatibilidad y portabilidad la hacen una herramienta ampliamente usada.
 
-## conan
+## SQLite con Conan
 Como suelo decir, personalmente creo que la manera más fácil de 
 usar una biblioteca de terceros es por medio de conan, siempre y cuando
-esté disponible (ver post de conan)
-[Conan como administrador de paquetes]({{ site.baseurl }}{% link _posts/es/intermedio/2020-11-08-conan-administrador-de-paquetes.md %}),
+esté disponible. En esta 
+[publicación]({{ site.baseurl }}{% link _posts/es/intermedio/2020-11-08-conan-administrador-de-paquetes.md %})
+se puede ver más sobre cómo usar conan.
 
-usar también fmt
+Para incluir SQLite:
 
-## SQL
+```text
+# conanfile.txt
+[requires]
+sqlite3/3.33.0
+fmt/7.1.2
+
+[generators]
+cmake
+```
+
+También está incluido `fmt`con el fin de insertarle _raw strings_ a las sentencias.
+
+## Sentencias SQL
+El primer paso es crear la base de datos. A continuación se crean las tablas, después 
+se poblan, y finalmente se consultan.
+
 ```sql
-DROP TABLE  dual;
+DROP TABLE dual;
 
 CREATE TABLE dual (
 Dummy varchar2(255),
 Value int
 );
 
-INSERT INTO "dual" VALUES('hello',10);
-INSERT INTO "dual" VALUES('goodbye',20);
+INSERT INTO "dual" VALUES('valor',10);
 
 select * from dual;
 ```
-Por un lado se crea el archivo de la base de datos. A esta base hay que crearle
-tablas (con sus respectivas relaciones)
-Pero suponiendo que se va a crear solamente una tabla "dual" 
-primero hay que asegurarse que no exista: DROP
-Luego se crea
-Se le insertan valores
-se consulta
+
+Suponiendo que se va a crear solamente una tabla llamada "dual" 
+primero hay que asegurarse que no exista: `DROP` se encarga de borrarla si existe.  
+Luego se crea la tabla _dual_ con las columnas _Dummy_ y _Value_.  
+Se le insertan los valores.  
+Finalmente se consultan todos los valores de la tabla.
 
 ## c++
-Para tener los mismos pasos anteriores en C++
+Para seguir los mismos pasos anteriores en C++:
 
-singleton para tener una sola instancia de la BD  
-open  que crea la BD si no existe, inicia la conexión  
-create table  intenta drop, si no existe continúa, crea  
-runquery ejecuta sentencia/transacción, crear, insertar  
-free  si ocurre algún error  
-close  finaliza la conexión  
-check the result, etc  
+1. Se crea la base de datos indicándole un nombre y un _handler_. Si ya existe 
+la reabre:
+
+    ```c++
+    sqlite3* dbHandler_ = nullptr;
+    auto result = sqlite3_open("database.sqlite3", &dbHandler_);
+    ```
+
+    Se puede crear una función auxiliar para ejecutar las sentencias
+
+    ```c++
+    int runStatement(const char * statement)
+    {
+      return sqlite3_exec(dbHandler_, statement, printCallback, static_cast<void*>(data_), &errorMessage_);
+    }
+    ```
+
+2. Se verifica que la tabla _dual_ no exista:
+    
+    ```c++
+    if (runStatement("DROP TABLE dual") != SQLITE_OK)
+    {
+      sqlite3_free("la tabla no existe");
+    }
+    ```
+3. Se crea la tabla
+
+    ```c++
+    const auto create = "CREATE TABLE dual (Col1 varchar2(255), Col2 int);";
+    
+    if (runStatement(create) != SQLITE_OK)
+    {
+      std::cerr << "SQL error: " << errorMessage_ << '\n';
+      sqlite3_free(errorMessage_);
+    }
+    ```
+
+4. Se le insertan valores
+
+    ```c++
+    const auto insert = "INSERT INTO dual VALUES('valor',10);";
+
+    if (runStatement(insert) != SQLITE_OK)
+    {
+      std::cerr << "SQL error: " << errorMessage_ << '\n';
+      sqlite3_free(errorMessage_);
+    }
+   ```
+
+5. Se consulta el contenido de la tabla
+
+    ```c++
+    const auto select = "SELECT * FROM dual;";
+
+    if (runStatement(select) != SQLITE_OK)
+    {
+      std::cerr << "SQL error: " << errorMessage_ << '\n';
+      sqlite3_free(errorMessage_);
+    }
+   ```
+
+6. Finalmente se cierra la base de datos:
+
+    ```c++
+    sqlite3_close(dbHandler_);
+    ```
 
 ## ..
 Crea un archivo .sqlite3  
@@ -73,8 +146,6 @@ ver DB, tabla, columnas
 ## Conclusiones
 Es util pero muy verbose, no tan intuitiva  
 Una forma interesante: usando SOCI
-
-
 
 
 ## Fuentes
