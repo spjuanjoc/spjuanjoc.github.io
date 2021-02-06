@@ -24,6 +24,7 @@ keywords              : [c++, C++, C++11, C++14, C++17, C++20, CMake]
 # Author
 # ==============================================================================
 github_username       : spjuanjoc
+github                : [metadata]
 author:
   name                : &name "Juan José Castellanos"
   avatar              : "/assets/images/bio-photo.jpg"
