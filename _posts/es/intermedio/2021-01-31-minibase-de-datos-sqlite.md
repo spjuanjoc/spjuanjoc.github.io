@@ -1,7 +1,7 @@
 ---
 title           : "Mini base de datos con SQLite3"
 date            : 2021-01-31
-last_modified_at: 2021-02-06
+last_modified_at: 2021-03-21
 
 categories:
   - Intermedio
@@ -38,8 +38,8 @@ de 32 y 64 bits, así como entre arquitecturas _big-endian_ y _little-endian_.
 
 Como suelo decir, personalmente creo que la manera más fácil de 
 usar una biblioteca de terceros es por medio de `Conan`, siempre y cuando
-esté disponible. En 
-[esta publicación]({{ site.baseurl }}{% link _posts/es/intermedio/2020-11-08-conan-administrador-de-paquetes.md %})
+esté disponible. En esta publicación sobre
+[Conan como administrador de paquetes]({{ site.baseurl }}{% link _posts/es/intermedio/2020-11-08-conan-administrador-de-paquetes.md %})
 se puede ver más sobre cómo usar `Conan`.
 
 Para incluir `SQLite` versión `3.33` en un proyecto `CMake`:
@@ -182,9 +182,9 @@ por ejemplo al intentar recuperar valores individuales de una columna en
 particular.  
 Por fortuna existe una biblioteca llamada _SOCI_ la cual envuelve _sqlite3_
 para hacer más sencilla e intuitiva la programación de `SQL` en `C++`
-dando la ilusión de que el código queda incrustado, y de la cual haré
-una publicación próximamente.
-
+dando la ilusión de que el código queda incrustado, y de la cual se puede 
+ver un ejemplo en la publicación 
+[SQL incrustado usando SOCI]({{ site.baseurl }}{% link _posts/es/avanzado/2021-02-21-sql-incrustado-soci.md %})
 
 ## Fuentes
 

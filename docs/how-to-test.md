@@ -20,7 +20,7 @@
 
 Every time the config.yml is modified the project needs to be rebuilt:
 Install the project's gems from its root:  
-   `bundle install; bundle update`
+   `bundle; bundle update; bundle exec jekyll build`
 
 Run the server:  
    `bundle exec jekyll serve`

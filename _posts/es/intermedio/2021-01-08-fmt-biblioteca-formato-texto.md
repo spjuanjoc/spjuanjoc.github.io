@@ -8,6 +8,7 @@ categories:
 tags:
   - C++20
   - conan
+  - fmt
 
 excerpt: "`{fmt}` es una biblioteca de código abierto, definida como una 
           alternativa rápida y segura frente a `stdio` (de C) y `iostreams` 
