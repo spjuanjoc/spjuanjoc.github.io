@@ -18,7 +18,7 @@ herramientas, en general varios requerimientos que desmotivan a alguien que
 esté iniciando a conocer el lenguaje.
 
 La documentación en español no es tan abundante como la que está en inglés; 
-[Javier Estrada](https://youtu.be/I8lVKve_bEk) es una de las personas que ha estado 
+[Javier Estrada](https://javierestrada.blog/) es una de las personas que ha estado 
 motivando a la comunidad hispanohablante para aumentar la documentación 
 disponible en español, entre otras ayudando a adecuar la 
 traducción de la [documentación oficial](https://es.cppreference.com/) y mantenerla al día. 
@@ -48,11 +48,10 @@ siguiendo los pasos que se muestran en la imagen:
 
 ![disqus-guest](/assets/screenshots/disqus-guest.png)
 
-## Visitas y publicidad
+## Publicidad
 
-El público objetivo del sitio es básicamente yo mismo, así que no tengo intención 
-de medir estadísticas de visitas; por lo tanto el sitio no contendrá publicidad
-ni rastreo de _analytics_.
+El público objetivo del sitio es básicamente yo mismo por lo tanto el sitio no 
+contendrá publicidad.
 
 ## Manos a la obra
 
