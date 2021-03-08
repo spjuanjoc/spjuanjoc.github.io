@@ -48,6 +48,7 @@ siguiendo los pasos que se muestran en la imagen:
 
 ![disqus-guest](/assets/screenshots/disqus-guest.png)
 
+
 ## Publicidad
 
 El público objetivo del sitio es básicamente yo mismo por lo tanto el sitio no 
