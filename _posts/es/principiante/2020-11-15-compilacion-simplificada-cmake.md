@@ -1,7 +1,7 @@
 ---
 title           : "Compilación simplificada con CMake"
 date            : 2020-11-15
-last_modified_at: 2020-11-15
+last_modified_at: 2021-03-08
 
 categories:
   - Principiante
@@ -56,7 +56,7 @@ La siguiente define el Binario Objetivo (_target_) y los archivos a incluir en �
 La última línea define el estándar de `C++` que el proyecto va a usar.  
 
 Con esas instrucciones ya se tienen los mínimos requerimientos para el proyecto
-`hola_cmake` que contendrá el siguiente código fuente:
+`hola_cmake` con el siguiente código fuente:
 
 ```c++
 // main.cpp
@@ -73,10 +73,10 @@ int main()
 ## Binarios objetivo: Targets
 
 Un proyecto `CMake` puede tener el objetivo de crear uno o varios Ejecutables, y Bibliotecas.
-Los archivos binarios generados tendrán diferentes sufijos o prefijos dependiendo
+Los archivos binarios generados tienen diferentes sufijos o prefijos dependiendo
 de la plataforma destino. 
-Por ejemplo para los ejecutables en Windows, `CMake` agregará el sufijo `.exe`.
-Para las bibliotecas se podrá configurar que sea estática (`.lib` ), o dinámica 
+Por ejemplo, para los ejecutables en Windows `CMake` agrega el sufijo `.exe`.
+Para las bibliotecas se puede configurar que sea estática (`.lib` ), o dinámica 
 (compartida `.dll`, `.so`, `.dylib`).
 
 El nombre del _target_ debe ser único en el proyecto, pero pueden existir varios 
@@ -89,11 +89,11 @@ definir por separado de los _targets_ por medio del comando `target_sources()`:
 # CMakeLists.txt
 #...
 add_executable("hola_cmake")
-add_library("hola_cmake_bib_estatica" STATIC)
+add_library("hola_cmake_bib_estatica"   STATIC)
 add_library("hola_cmake_bib_compartida" SHARED)
 
-target_sources("hola_cmake" PUBLIC main.cpp)
-target_sources("hola_cmake_bib_estatica" PUBLIC foo.cpp)
+target_sources("hola_cmake"                PUBLIC main.cpp)
+target_sources("hola_cmake_bib_estatica"   PUBLIC foo.cpp)
 target_sources("hola_cmake_bib_compartida" PUBLIC bar.cpp)
 #...
 ```
@@ -107,14 +107,14 @@ modificar sin necesidad de cambiar el archivo `CMakeLists.txt`:
 # CMakeLists.txt
 #...
 # Options
-option(ENABLE_TESTS       "Habilitar compilación de pruebas" False)
-option(ENABLE_CONAN       "Habilitar Conan" False)
+option(ENABLE_TESTS "Habilitar compilación de pruebas" False)
+option(ENABLE_CONAN "Habilitar uso de Conan" False)
 #...
 ```
 
-Así el usuario podrá ejecutar los comandos de generación con valores diferentes 
+Así el usuario puede ejecutar los comandos de generación con valores diferentes 
 dependiendo de la configuración requerida. Por ejemplo para una configuración en modo _release_
-se podría dejar sin habilitar la compilación de pruebas, pero para una configuración
+se puede dejar sin habilitar la compilación de pruebas, pero para una configuración
 en modo _debug_ habilitarlas:
 
     cmake .. -DENABLE_TESTS=True
@@ -123,17 +123,17 @@ en modo _debug_ habilitarlas:
 ## Subdirectorios
 
 Por medio del comando `add_subdirectory()` es posible indicarle al proyecto que 
-un subdirectorio habrá otro archivo `CMakeLists.txt` que también hace parte del 
+en un subdirectorio hay otro archivo `CMakeLists.txt` que también hace parte del 
 proyecto.
-Así por ejemplo, teniendo un directorio exclusivo para pruebas _test_ con su 
-propio archivo de `cmake`, el archivo principal podrá agregarlo al proyecto:
+Teniendo un directorio exclusivo para pruebas (_test_) con su 
+propio archivo de `CMakeLists`, el archivo principal lo agrega al proyecto así:
 
 ```cmake
 # CMakeLists.txt
 #...
 if(ENABLE_TESTS)
   add_subdirectory(test)
-elseif()
+else()
   message("Compilación de pruebas deshabilitada")
 endif()
 ```
@@ -141,25 +141,25 @@ endif()
 ## Ejecución de CMake
 
 La ejecución de los comandos `CMake` se divide en dos pasos: generación y compilación.
-`CMake` incluye integración con múltiples `IDEs` en las cuales se podrán personalizar 
+`CMake` incluye integración con múltiples `IDEs` en las cuales se pueden personalizar 
 estos dos pasos.  
 
 La generación corresponde a crear los archivos con las instrucciones de compilación
-de acuerdo al _generador_ seleccionado. Si no se selecciona uno, `CMake` podrá elegir
+de acuerdo al _generador_ seleccionado. Si no se selecciona uno, `CMake` elige
 el predeterminado para la plataforma en la cual se está ejecutando. 
 Es recomendable que la generación y compilación se hagan en un directorio diferente
 al directorio raíz del proyecto, y dentro de éste, pero que sea excluido del
 sistema de control de versiones.
 
 Para un sistema GNU/Linux con Ubuntu, para el proyecto `hola_cmake` se puede crear el
-directorio `./cmake-build/`  desde el cual se ejecuta el comando de generación:
+directorio `cmake-build/`  desde el cual se ejecuta el comando de generación:
 
     cmake .. -G "Unix Makefiles" -DENABLE_TESTS=True
 
 Donde `"Unix Makefiles"` es el generador elegido.  
 
 
-La compilación desde `CMake` creará los archivos binarios para los _targets_
+La compilación desde `CMake` crea los archivos binarios para los _targets_
 definidos en el proyecto. Desde un terminal Unix el comando de compilación
 desde el directorio `cmake-build/` es:
 
@@ -172,7 +172,7 @@ la compilación fue exitosa, se habrán creado los objetivos:
     libhola_cmake_bib_estatica.a
     libhola_cmake_bib_compartida.so
 
-El ejecutable se podrá correr con el resultado esperado:
+Al correr el ejecutable se obtiene el resultado esperado:
 
     $ ./hola_cmake 
     Hola CMake
@@ -180,8 +180,8 @@ El ejecutable se podrá correr con el resultado esperado:
 ---
 
 ## Consideraciones
-- Para versiones de cmake menores a 3.15 pueden aparecer warnings relacionados
-con el comando `target_sources()`.
+- Para versiones de cmake menores a 3.15 pueden aparecer mensajes de 
+  advertencia relacionados con el comando `target_sources()`.
 
 ## Fuentes
 - Documentación oficial de [CMake](https://cmake.org/cmake/help/latest/index.html)
