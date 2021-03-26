@@ -14,6 +14,7 @@ excerpt: "SQLite es una biblioteca que implementa un motor de bases de datos
           pequeño, rápido, auto-contenido, de alta fiabilidad, y de 
           funcionalidad SQL completa."
 header:
+  og_image      : /assets/images/unsplash-jan-antonin-kolar-database.jpg
   teaser        : /assets/images/unsplash-jan-antonin-kolar-database.jpg
   overlay_image : /assets/images/unsplash-jan-antonin-kolar-database.jpg
   overlay_filter: 0.5

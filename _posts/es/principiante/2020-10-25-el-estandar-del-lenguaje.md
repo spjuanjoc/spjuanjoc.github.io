@@ -13,6 +13,7 @@ excerpt: "Un estándar de C++ hace referencia a una versión aprobada por el
           98, 03, 11, 14, 17, y 20; estos números corresponden a los años de su
           aprobación."
 header:
+  og_image      : /assets/images/unsplash-siavosh-hosseini-meeting.jpg
   teaser        : /assets/images/unsplash-siavosh-hosseini-meeting.jpg
   overlay_image : /assets/images/unsplash-siavosh-hosseini-meeting.jpg
   overlay_filter: 0.5

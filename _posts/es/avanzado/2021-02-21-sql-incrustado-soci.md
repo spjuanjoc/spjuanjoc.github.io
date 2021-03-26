@@ -19,6 +19,7 @@ excerpt: "SOCI es una biblioteca de acceso a bases de datos que soporta `SQLite`
           `C++` combinando _SOCI_ con `fmt` y algunas características básicas de 
           `C++` moderno."
 header:
+  og_image      : /assets/images/unsplash-tobias-fischer-database.jpg
   teaser        : /assets/images/unsplash-tobias-fischer-database.jpg
   overlay_image : /assets/images/unsplash-tobias-fischer-database.jpg
   overlay_filter: 0.5

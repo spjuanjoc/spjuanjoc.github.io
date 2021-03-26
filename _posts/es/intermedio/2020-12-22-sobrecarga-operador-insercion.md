@@ -12,6 +12,7 @@ excerpt: "Un _stream_ es un canal de flujo de datos; el operador de inserción
           `<<` se encarga de insertar datos en un flujo de salida `std::ostream`, 
           como lo es `std::cout`."
 header:
+  og_image      : /assets/images/unsplash-vlad-tchompalov-stream.jpg
   teaser        : /assets/images/unsplash-vlad-tchompalov-stream.jpg
   overlay_image : /assets/images/unsplash-vlad-tchompalov-stream.jpg
   overlay_filter: 0.25
