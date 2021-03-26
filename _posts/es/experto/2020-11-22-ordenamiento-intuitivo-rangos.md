@@ -13,6 +13,7 @@ excerpt: "La biblioteca de rangos incluida en `C++20` trae finalmente una
           funcionalidad con la cual realizar ordenamientos en contenedores 
           secuenciales de la STL de una manera intuitiva y fácil de comprender."
 header:
+  og_image      : /assets/images/unsplash-fleur-scales.jpg
   teaser        : /assets/images/unsplash-fleur-scales.jpg
   overlay_image : /assets/images/unsplash-fleur-scales.jpg
   overlay_filter: 0.5
