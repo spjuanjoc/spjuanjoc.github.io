@@ -14,6 +14,7 @@ excerpt: "Los dos tipos de bibliotecas usualmente creadas en `C++` son:
           A diferencia de los binarios ejecutables no tienen punto de entrada 
           `main` definido."
 header:
+  og_image      : /assets/images/unsplash-jez-timms-library.jpg
   teaser        : /assets/images/unsplash-jez-timms-library.jpg
   overlay_image : /assets/images/unsplash-jez-timms-library.jpg
   overlay_filter: 0.0

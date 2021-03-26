@@ -14,6 +14,7 @@ excerpt: "Uno de los generadores `CMake` disponibles se denomina `Ninja`, y
           mismo nombre."
 
 header:
+  og_image      : /assets/images/unsplash-marilia-castelli-ninja.jpg
   teaser        : /assets/images/unsplash-marilia-castelli-ninja.jpg
   overlay_image : /assets/images/unsplash-marilia-castelli-ninja.jpg
   overlay_filter: 0.5

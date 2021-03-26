@@ -15,6 +15,7 @@ excerpt: "`{fmt}` es una biblioteca de código abierto, definida como una
           (de C++) para dar formato. `std::format` de `C++20` surge a partir de 
           `fmt::format`."
 header:
+  og_image      : /assets/images/unsplash-denise-jans-typewriter.jpg
   teaser        : /assets/images/unsplash-denise-jans-typewriter.jpg
   overlay_image : /assets/images/unsplash-denise-jans-typewriter.jpg
   overlay_filter: 0.5
