@@ -48,3 +48,13 @@ From [asnowfix](https://github.com/github/pages-gem/issues/399#issuecomment-3018
     - Run serve  
         `bundle exec jekyll serve`
 
+## Add MathJax
+
+See 
+[cross-validated](https://www.cross-validated.com/How-to-render-math-on-Minimal-Mistakes/),
+[janmeppe](https://www.janmeppe.com/blog/How-to-add-mathjax-to-minimal-mistakes/),
+[pwills](http://www.pwills.com/posts/2017/12/20/website.html)
+posts. To avoid modifying the file scripts.html, the same can be done
+modifying the _includes/head/custom.html file.
+
+To create an equation with a helper see this LaTeX [eq editor](https://www.codecogs.com/latex/eqneditor.php).
