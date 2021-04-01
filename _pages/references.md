@@ -8,12 +8,12 @@ entries_layout: grid
 ---
 
 En esta sección no pretendo recomendar todos los libros habidos y por haber
-relacionados con la programación en `C++`, más bien unos cuantos blogs, y charlas
-en conferencias que me han parecido útiles e interesantes. De todos modos también
-incluyo la documentación oficial en español, un par de libros recientes (>2014),
-y un curso introductorio bastante completo. De nuevo, casi todo está en inglés.
-Finalmente, incluyo la referencia de las imágenes de miniaturas.
-
+relacionados con la programación en `C++`, más bien unos cuantos blogs, y
+charlas en conferencias que me han parecido útiles e interesantes. De todos
+modos también incluyo la documentación oficial en español, un par de libros
+recientes (>2014), y un curso introductorio bastante completo. De nuevo, casi
+todo está en inglés. Finalmente, incluyo la referencia de las imágenes de
+miniaturas.
 
 ## Documentación oficial:
 * [Cpp Reference](https://es.cppreference.com/)
