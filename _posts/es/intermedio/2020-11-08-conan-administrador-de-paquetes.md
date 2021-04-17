@@ -24,19 +24,19 @@ header:
 
 ---
 
-Un aspecto clave al trabajar con bibliotecas de terceros en cualquier lenguaje 
-de programación es la facilidad para administrar paquetes.
-En cuanto a `C` y `C++` actualmente no hay un administrador incluido de manera
-predeterminada, sin embargo existen varias opciones externas entre las que destacan 
+Un aspecto clave al trabajar con bibliotecas de terceros en cualquier lenguaje
+de programación es la facilidad para administrar paquetes. En cuanto a `C`
+y `C++` actualmente no hay un administrador incluido de manera predeterminada,
+sin embargo existen varias opciones externas entre las que destacan
 _vcpkg_, y _Conan_.
 
-_Conan_ es un administrador de paquetes multiplataforma, descentralizado, 
-y de código abierto, que permite crear y compartir paquetes de software.
+_Conan_ es un administrador de paquetes multiplataforma, descentralizado, y de
+código abierto, que permite crear y compartir paquetes de software.
 
 ## Usar bibliotecas de terceros
 
 Tradicionalmente al escribir un programa en `C++` que usa una biblioteca de
-terceros, por ejemplo Boost, los pasos a seguir serían:  
+terceros, por ejemplo Boost, los pasos a seguir serían:
 
 1. Descargar el paquete (o el código fuente y compilar)
 2. Vincular el paquete al proyecto (identificar la ruta)
@@ -45,30 +45,30 @@ terceros, por ejemplo Boost, los pasos a seguir serían:
 5. Usar la biblioteca en el programa
 
 Estos pasos se repiten para cada biblioteca que se quiera usar en el proyecto.
-Para cambiar de versión probablemente habría que desinstalar la anterior.
-Los pasos pueden variar dependiendo de la plataforma (Windows, Linux/Ubuntu, MacOS).
+Para cambiar de versión probablemente habría que desinstalar la anterior. Los
+pasos pueden variar dependiendo de la plataforma (Windows, Linux/Ubuntu, MacOS).
 
 Con _Conan_ los pasos son similares pero centralizados en lo que han llamado
-"La Receta", en donde se puede identificar de manera inmediata la versión, 
-cambiarla fácilmente (si está disponible), y de manera independiente a la
-plataforma. 
-La receta puede estar en un archivo plano `conanfile.txt`, o en un `conanfile.py`
-para configuraciones más avanzadas.
+"Recetas", y a las cuales se accede por medio de una "referencia a receta", en
+donde se puede identificar de manera inmediata: el nombre del paquete, la
+versión, el canal y el usuario. La receta puede estar referenciada en un archivo
+plano `conanfile.txt`, o en un `conanfile.py` para configuraciones más
+avanzadas.
 
 ## Ejemplos
 
-Los siguientes ejemplos muestran la configuración requerida por _Conan_ 
+Los siguientes ejemplos muestran la configuración requerida por _Conan_
 para utilizar algunas bibliotecas de terceros en un proyecto `CMake`:
 
 ### googletest
 
-Es el _framework_ de pruebas de google. Es usado para crear 
-pruebas unitarias, _fixtures_, _mocks_, entre otros. Tiene dos 
-componentes principales: _gtest_ y _gmock_.  
-Los pasos a seguir son:  
+Es el _framework_ de pruebas de google. Es usado para crear pruebas unitarias, 
+_fixtures_, _mocks_, entre otros. Tiene dos componentes principales: _gtest_ y 
+_gmock_.  
+Los pasos a seguir son:
 
 1. Crear el archivo `conanfile.txt`. Se incluye la versión de _gtest_ requerida,
-y el generador con el que se va a compilar.  
+   y el generador con el que se va a compilar.  
     ```text
     # conanfile.txt
     [requires]
@@ -139,10 +139,10 @@ TEST_CASE("foo")
 
 ### Boost Property Tree
 
-Con _Boost_ hay que tener algunas consideraciones adicionales. 
-La primera es que se pueden usar sub-paquetes de boost por separado gracias a 
-que se encuentran alojados en el repositorio de _bincrafters_.
-En este ejemplo se selecciona únicamente Boost.PropertyTree (incluye sus dependencias)
+Con _Boost_ hay que tener algunas consideraciones adicionales. La primera es que
+se pueden usar sub-paquetes de boost por separado gracias a que se encuentran
+alojados en el repositorio de _bincrafters_. En este ejemplo se selecciona
+únicamente Boost.PropertyTree (incluye sus dependencias)
 en la versión de boost `1.69` desde el repositorio _bincrafters_:  
 En `conanfile.txt`:  
 ```text
@@ -189,10 +189,10 @@ pip3 install conan
 conan user
 ```
 
-Después de tener _Conan_ instalado se puede proceder a instalar los paquetes para
-un proyecto que ya tenga la configuración de bibliotecas manejadas por _Conan_. 
-Por ejemplo para un proyecto en el que la compilación se hará desde el directorio 
-`build/` el comando es:  
+Después de tener _Conan_ instalado se puede proceder a instalar los paquetes
+para un proyecto que ya tenga la configuración de bibliotecas manejadas por 
+_Conan_. Por ejemplo para un proyecto en el que la compilación se hará desde el
+directorio `build/` el comando es:  
 ```shell
 conan install ..
 ```
