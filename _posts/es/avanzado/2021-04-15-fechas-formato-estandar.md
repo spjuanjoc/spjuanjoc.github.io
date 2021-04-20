@@ -56,8 +56,8 @@ Para obtener los valores con `std::time` al estilo C:
 
 int main()
 {
-  const time_t now = std::time(nullptr);
-  const std::tm now_tm = *localtime(&now);
+  const std::time_t now = std::time(nullptr);
+  const std::tm now_tm  = *(std::localtime(&now));
   std::cout << std::put_time(&now_tm, "%Y-%m-%dT%T%z");
   return 0;
 }
@@ -74,7 +74,7 @@ using std::chrono::system_clock;
 int main()
 {
   const std::time_t now = system_clock::to_time_t(system_clock::now());
-  const std::tm     tm  = *localtime(&now);
+  const std::tm     tm  = *(std::localtime(&now));
   std::cout << std::put_time(&tm, "%Y-%m-%dT%T%z");
   return 0;
 }
@@ -111,8 +111,8 @@ int main()
 ```
 
 Con `std::chrono::system_clock` y fmt se puede usar directamente 
-`std::chrono::time_point` por lo cual no hace falta convertir el objeto a `std::time_t`
-y que incluso genera un binario de menor tamaño.
+`std::chrono::time_point` por lo cual no hace falta convertir el objeto a 
+`std::time_t`; incluso se genera un binario de menor tamaño.
 
 ```c++
 #include <fmt/chrono.h>
