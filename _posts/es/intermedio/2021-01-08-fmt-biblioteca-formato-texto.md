@@ -31,7 +31,7 @@ y `std::ostream` para `libc++`. Fuera del estándar existen otras cuantas
 bibliotecas ampliamente usadas, como _Boost Format_, _Fast Format_, y _**fmt**_.
 
 La sintaxis para mostrar en pantalla el valor del entero `x` con un ancho de `4`
-en algunas de las bibliotecas nombradas sería la siguiente:
+en algunas de las bibliotecas nombradas es la siguiente:
 ```c++
 printf("%4d\n", x);                       // libc
 std::cout << std::setw(4) << x << '\n';   // libc++
@@ -67,52 +67,52 @@ no tiene acceso aleatorio, y hace más complejo lidiar con argumentos posicional
 posición.
 
     ```c++
-    fmt::format("{}, {}, {}", 'a', 'b', 'c');    // "a, b, c"
-    fmt::format("{0}, {1}, {2}", 'a', 'b', 'c'); // "a, b, c"
-    fmt::format("{2}, {1}, {0}", 'a', 'b', 'c'); // "c, b, a"
-    fmt::format("{0}{1}{0}", "abra", "cad");     // "abracadabra"
+fmt::format("{}, {}, {}", 'a', 'b', 'c');    // "a, b, c"
+fmt::format("{0}, {1}, {2}", 'a', 'b', 'c'); // "a, b, c"
+fmt::format("{2}, {1}, {0}", 'a', 'b', 'c'); // "c, b, a"
+fmt::format("{0}{1}{0}", "abra", "cad");     // "abracadabra"
     ```
 
 2. Alineamiento del texto: izquierda, derecha, centro, con ancho fijo o dinámico.
 
     ```c++
-    fmt::format("{:<30}", "alineado a la izquierda"); // fijo
-    // "alineado a la izquierda       "
-    
-    fmt::format("{:<{}}", "alineado a la izquierda", 30); // dinámico
-    // "alineado a la izquierda       "
+fmt::format("{:<30}", "alineado a la izquierda"); // fijo
+// "alineado a la izquierda       "
+
+fmt::format("{:<{}}", "alineado a la izquierda", 30); // dinámico
+// "alineado a la izquierda       "
     ```
 
 3. Precisión en flotantes: fija o dinámica
 
     ```c++
-    fmt::print("{:.1f}", 3.14159265359); // fija
-    // "3.1"
-    
-    fmt::print("{:.{}f}", 3.14159265359, 4); // dinámica
-    // "3.1416"
+fmt::print("{:.1f}", 3.14159265359); // fija
+// "3.1"
+
+fmt::print("{:.{}f}", 3.14159265359, 4); // dinámica
+// "3.1416"
     ```
 
 4. Fechas: chrono
 
     ```c++
-    #include <fmt/chrono.h>
-    
-    int main() 
-    {
-      auto t = tm();
-      
-      t.tm_year = 2021 - 1900;
-      t.tm_mon  = 1;
-      t.tm_mday = 10;
-      t.tm_hour = 12;
-      t.tm_min  = 15;
-      t.tm_sec  = 30;
-      
-      fmt::print("{:%Y-%m-%d %H:%M:%S}", t);
-      
-      return 0;
-    }
+#include <fmt/chrono.h>
+
+int main() 
+{
+  auto t = tm();
+  
+  t.tm_year = 2021 - 1900;
+  t.tm_mon  = 1;
+  t.tm_mday = 10;
+  t.tm_hour = 12;
+  t.tm_min  = 15;
+  t.tm_sec  = 30;
+  
+  fmt::print("{:%Y-%m-%d %H:%M:%S}", t);
+  
+  return 0;
+}
     ```
 
     Resultado: `2021-02-10 12:15:30`
@@ -151,7 +151,9 @@ Segundo, se enlaza la biblioteca al proyecto:
 ```cmake
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
-conan_target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS} )
+
+target_link_libraries(${PROJECT_NAME} PRIVATE pthread CONAN_PKG::fmt) # Opción 1
+# conan_target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS} ) # Opción 2
 ```
 
 Tercero, se incluyen los archivos de encabezado que se requieran (core, format, color)
@@ -172,7 +174,7 @@ int main()
 `spdlog` es una biblioteca de _logging_ que usa `fmt` de manera interna 
 (empaquetado), por lo cual hay que tener consideraciones extra si se quieren 
 usar ambos con Conan.  
-De todos modos es posible usar `spdlog` de manera externa
+De todos modos es posible usar `spdlog` con `{fmt}` de manera externa
 por medio de las variables de `cmake`:
 
 ```
