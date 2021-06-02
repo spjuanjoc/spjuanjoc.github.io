@@ -1,5 +1,5 @@
 ---
-title           : "Operador «nave espacial»"
+title           : "Operador nave espacial: de comparación de tres vías"
 date            : 2020-10-31
 last_modified_at: 2020-12-14
 
@@ -25,12 +25,13 @@ header:
 Nave espacial es el nombre con el que se conoce al `operator<=>` introducido
 en el estándar `C++20`; hace referencia al operador de comparación de tres vías
 que es usado para: primero comparar dos objetos, y luego comparar ese resultado 
-con cero.
+con cero.  
 Una de sus principales ventajas es que reduce el código _boilerplate_: secciones 
 de código que se repiten en varias partes y son requeridas para una 
-funcionalidad específica.
+funcionalidad específica, como lo son las secciones de código de los distintos 
+operadores de comparación.
 
-Previo a `C++20` se podría encontrar código como el siguiente:
+Previo a `C++20` se puede encontrar código como el siguiente:
  
 {% raw %}
 ````c++
@@ -51,18 +52,19 @@ struct S
 
 Allí se definen las comparaciones requeridas para una nueva estructura `S`.
 
-El código compila y funciona pero podría ser mucho más simple, además sería 
-óptimo dejar que el compilador generara estos operadores automáticamente
+El código compila y funciona pero puede ser mucho más simple, además puede ser 
+óptimo dejar que el compilador genere estos operadores automáticamente
 para aprovechar funcionalidades adicionales de ordenamiento. 
 
 ## Comparación de tres vías
 
 Al definir el operador de comparación de tres vías como predeterminado para que 
-lo genere el compilador de manera automática, el código anterior será reducido a:
+lo genere el compilador de manera automática, el código anterior es reducido a:
 
 {% raw %}
 ````c++
-struct S {
+struct S
+{
   int value;
 
   // Operador nave espacial
@@ -71,30 +73,31 @@ struct S {
 ````
 {% endraw %}
 
-El compilador generará todas las comparaciones por defecto.
-El tipo de retorno podría ser `bool`, sin embargo es conveniente dejarlo como 
+El compilador genera todas las comparaciones por defecto.
+El tipo de retorno puede ser `bool`, sin embargo es conveniente dejarlo como 
 `auto` para tener en cuenta el ordenamiento, del cual hablo en la publicación
 sobre [ordenamiento intuitivo]({{ site.baseurl }}{% link _posts/es/experto/2020-11-22-ordenamiento-intuitivo-rangos.md %}).
 
 ## Usos
 
-Uno podría preguntarse ¿Por qué definir las comparaciones para una estructura? 
-Supongamos que se quiere tener una colección de objetos de `S` que crezca de 
+¿Por qué definir las comparaciones para una estructura? 
+Suponiendo que se quiere tener una colección de objetos de `S` que crezca de 
 manera dinámica en memoria contigua, y que se puedan visualizar en la consola. 
-En este caso se podría escojer un contenedor `std::vector` de la biblioteca `STL`.
+En este caso se puede escoger un contenedor `std::vector` de la biblioteca `STL`.
 
-Pues bien, una de las condiciones para usar la biblioteca `STL` en una estructura
+Una de las condiciones para usar la biblioteca `STL` en una estructura
 definida por el usuario es que sus objetos se puedan comparar, lo cual se logra
 con el operador nave espacial.  
 Crear un vector de `S` y visualizar sus elementos por medio de un 
-_range-based for-loop_ será tan simple como: 
+_range-based for-loop_ es tan simple como: 
 
 {% raw %}
 ````c++
 #include <iostream>
 #include <vector>
 
-struct S {
+struct S 
+{
   int value;
   auto operator<=>(const S&) const = default;
 };
@@ -112,7 +115,7 @@ int main()
 ````
 {% endraw %}
 
-El resultado será:
+El resultado es:
 
     vector de S: 3 2 1 42 
 
@@ -123,7 +126,7 @@ El operador de comparación de tres vías está disponible en:
 - Estándar: `-std=C++20`, `-std=gnu++2a` o `-std=c++2a`, con biblioteca: `libstdc++ 2020`. 
 - Versión del compilador: `gcc > '10.2'`
 
-Todo el código se puede compilar en [godbolt.org](https://godbolt.org/).
+El código mostrado se puede compilar en [compiler-explorer](https://compiler-explorer.com/).
 
 ## Fuentes
 - [Comparaciones por defecto](https://es.cppreference.com/w/cpp/language/default_comparisons)
