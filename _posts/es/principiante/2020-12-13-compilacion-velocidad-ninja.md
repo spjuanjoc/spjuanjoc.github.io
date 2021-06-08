@@ -32,10 +32,10 @@ y las opciones de compilación por medio de la línea de comandos:
     clang++ main.cpp -std=c++17 -Wall -Werror -O3 -o main.out
 
 Este tipo de compilación tienen ciertas condiciones, por ejemplo la dependencia
-de la plataforma. Si se desea compilar una biblioteca habrá que tener en cuenta 
+de la plataforma. Si se desea compilar una biblioteca hay que tener en cuenta 
 aún más argumentos.  
 
-`CMake` se creó con el fin de facilitar la compilación multi-plataforma, y 
+`CMake` fue creado con el fin de facilitar la compilación multi-plataforma; 
 usualmente identifica automáticamente los generadores requeridos para la 
 plataforma en la cual se ejecuta, por ejemplo `"Unix"`, `"MinGW"`, o `"NMake"`, 
 o los soportados por IDEs específicas como `"Visual Studio 16 2019"`, y 
@@ -64,7 +64,7 @@ apuntando al archivo `CMakeLists.txt`.
 
 ## Compilación Ninja
 
-Usualmente se elige un directorio específico para la compilación ya que no
+Usualmente se elige un directorio específico para la compilación, ya que no
 es recomendable compilar en el directorio raíz del proyecto.  
 Creando por ejemplo el directorio `build/`, para compilar desde éste se siguen 
 los pasos:
@@ -92,8 +92,8 @@ los pasos:
 
 ## Uso óptimo de recursos
 
-Ninja optimizará el uso de los recursos disponibles, llegando
-hasta al `100 %` del uso de CPU.
+Ninja optimiza el uso de los recursos disponibles, llegando hasta al `100 %` del
+uso de CPU.
 
 ![Ninja](/assets/images/ninja-uso-cpu.png "Uso de CPU al compilar con Ninja")
 
