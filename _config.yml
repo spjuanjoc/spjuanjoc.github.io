@@ -80,7 +80,7 @@ minimal_mistakes_skin : "dark"
 # Plugins
 # ==============================================================================
 plugins:
-#  - jekyll-feed
+  - jekyll-feed
   - jekyll-gist
   - jekyll-include-cache
   - jekyll-paginate
