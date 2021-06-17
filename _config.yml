@@ -31,17 +31,17 @@ author:
   bio                 : "Ingeniero de Software. Entusiasta de C++"
   links:
     - label           : "GitHub"
-      icon            : "fab fa-fw fa-github"
+      icon            : "fab fa-fw fa-github icon-white"
       url             : "https://github.com/spjuanjoc/spjuanjoc.github.io"
-    - label           : "email"
+    - label           : "Correo"
       icon            : "fas fa-fw fa-envelope-square"
       url             : "mailto:juanchocaste@gmail.com"
 footer:
   links:
     - label           : "GitHub"
-      icon            : "fab fa-fw fa-github"
+      icon            : "fab fa-fw fa-github icon-white"
       url             : "https://github.com/spjuanjoc/spjuanjoc.github.io"
-    - label           : "email"
+    - label           : "Correo"
       icon            : "fas fa-fw fa-envelope-square"
       url             : "mailto:juanchocaste@gmail.com"
 
