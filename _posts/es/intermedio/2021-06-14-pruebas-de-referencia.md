@@ -1,7 +1,7 @@
 ---
 title           : "Pruebas de referencia: benchmark"
 date            : 2021-06-14
-last_modified_at: 2021-06-14
+last_modified_at: 2021-06-21
 
 categories:
   - Intermedio
@@ -101,7 +101,7 @@ se implementa de tres maneras:
 
 - regularFib: usando la relación de recurrencia. 
 - constexprFib: la misma fórmula pero haciendo la función `constexpr`.
-- binetsFib: usando la Fórmula de Binet,
+- binetsFib: usando la Fórmula de Binet.
 
 El siguiente caso de prueba contiene las tres pruebas de referencia
 compiladas con `GCC`:
