@@ -41,10 +41,21 @@ std::cout << folly::format("{:4}\n", x);  // Folly Format
 fmt::print("{:4}\n", x);                  // fmt
 ```
 
+## Python str.format()
+
+Uno de los métodos de formato de cadenas en Python es `str.format()` el cual
+contiene “campos de reemplazo” rodeados por llaves `{campo}`. Todo lo que no
+esté contenido entre llaves se considera texto literal, el cual es copiado sin
+modificaciones a la salida. [^1]
+
+Este método fue introducido en la versión 2.6 como una funcionalidad similar
+a la del operador módulo (`%`) en cadenas, pero mucho más versátil. [^2]
+
+
 ## La biblioteca fmt
 
 `{fmt}` es una biblioteca de formato, de código abierto, una alternativa rápida 
-y segura frente a `stdio` (de C) y `iostreams` (de C++). [^1]
+y segura frente a `stdio` (de C) y `iostreams` (de C++). [^3]
 
 Esta biblioteca pretende acercarse a la funcionalidad de Python `str.format`,
 como una forma expresiva, rápida, segura, e intuitiva de procesar texto con formato.
@@ -67,56 +78,57 @@ no tiene acceso aleatorio, y hace más complejo lidiar con argumentos posicional
 posición.
 
     ```c++
-fmt::format("{}, {}, {}", 'a', 'b', 'c');    // "a, b, c"
-fmt::format("{0}, {1}, {2}", 'a', 'b', 'c'); // "a, b, c"
-fmt::format("{2}, {1}, {0}", 'a', 'b', 'c'); // "c, b, a"
-fmt::format("{0}{1}{0}", "abra", "cad");     // "abracadabra"
-    ```
+    fmt::format("{}, {}, {}", 'a', 'b', 'c');    // "a, b, c"
+    fmt::format("{0}, {1}, {2}", 'a', 'b', 'c'); // "a, b, c"
+    fmt::format("{2}, {1}, {0}", 'a', 'b', 'c'); // "c, b, a"
+    fmt::format("{0}{1}{0}", "abra", "cad");     // "abracadabra"
+     ```
 
 2. Alineamiento del texto: izquierda, derecha, centro, con ancho fijo o dinámico.
 
     ```c++
-fmt::format("{:<30}", "alineado a la izquierda"); // fijo
-// "alineado a la izquierda       "
-
-fmt::format("{:<{}}", "alineado a la izquierda", 30); // dinámico
-// "alineado a la izquierda       "
+    fmt::format("{:<30}", "alineado a la izquierda"); // fijo
+    // "alineado a la izquierda       "
+    
+    fmt::format("{:<{}}", "alineado a la izquierda", 30); // dinámico
+    // "alineado a la izquierda       "
     ```
 
 3. Precisión en flotantes: fija o dinámica
 
     ```c++
-fmt::print("{:.1f}", 3.14159265359); // fija
-// "3.1"
-
-fmt::print("{:.{}f}", 3.14159265359, 4); // dinámica
-// "3.1416"
+    fmt::print("{:.1f}", 3.14159265359); // fija
+    // "3.1"
+    
+    fmt::print("{:.{}f}", 3.14159265359, 4); // dinámica
+    // "3.1416"
     ```
 
 4. Fechas: chrono
 
     ```c++
-#include <fmt/chrono.h>
-
-int main() 
-{
-  auto t = tm();
-  
-  t.tm_year = 2021 - 1900;
-  t.tm_mon  = 1;
-  t.tm_mday = 10;
-  t.tm_hour = 12;
-  t.tm_min  = 15;
-  t.tm_sec  = 30;
-  
-  fmt::print("{:%Y-%m-%d %H:%M:%S}", t);
-  
-  return 0;
-}
+    #include <fmt/chrono.h>
+    
+    int main() 
+    {
+      auto t = tm();
+      
+      t.tm_year = 2021 - 1900;
+      t.tm_mon  = 1;
+      t.tm_mday = 10;
+      t.tm_hour = 12;
+      t.tm_min  = 15;
+      t.tm_sec  = 30;
+      
+      fmt::print("{:%Y-%m-%d %H:%M:%S}", t);
+      
+      return 0;
+    }
     ```
 
-    Resultado: `2021-02-10 12:15:30`
-
+    Resultado: `2021-02-10 12:15:30`  
+    Para una descripción más avanzada del uso de fmt/chrono ver la publicación
+   [fechas en formato estándar]({{ site.baseurl }}{% link _posts/es/avanzado/2021-04-15-fechas-formato-estandar.md %})
 
 ## std::format
 
@@ -140,20 +152,21 @@ Primero, se elige la receta de la versión de fmt a usar:
 ```
 # conanfile.txt
 [requires]
-fmt/7.1.2
+  fmt/7.1.2
 
 [generators]
-cmake
+  cmake_find_package
 ```
 
 Segundo, se enlaza la biblioteca al proyecto:
 
 ```cmake
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
-
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread CONAN_PKG::fmt) # Opción 1
-# conan_target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS} ) # Opción 2
+# CMakeLists.txt
+#...
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_BINARY_DIR})
+find_package(fmt REQUIRED)
+#...
+target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt)
 ```
 
 Tercero, se incluyen los archivos de encabezado que se requieran (core, format, color)
@@ -182,16 +195,16 @@ SPDLOG_FMT_EXTERNAL: "Use external fmt library instead of bundled"
 SPDLOG_FMT_EXTERNAL_HO: "Use external fmt header-only library instead of bundled"
 ```
 
-## fmt en Godbolt
+## fmt en Compiler-explorer
 
-También es posible usar `fmt` directamente desde [godbolt.org](https://godbolt.org/z/Eq5763) 
+También es posible usar `fmt` directamente desde [compiler-explorer](https://godbolt.org/z/Eq5763) 
 seleccionándola de la lista de bibliotecas disponibles.
 
 
 ## Benchmarks para fmt
 
 Algunas pruebas de referencia comparando la velocidad muestran que su desempeño
-es cercano al de `printf` (y en algunos casos superior a este [^2]), y muy
+es cercano al de `printf` (y en algunos casos superior a este [^4]), y muy
 superior a los demás:
 
 | Método | Tiempo de ejecución (segundos)|
@@ -203,13 +216,17 @@ superior a los demás:
 | tinyformat     | 3.69 |
 | boost::format  | 8.4  |
 
-Benchmark de TinyFormat[^3].
+Benchmark de TinyFormat[^5].
 
 
 ## Fuentes
+
 - Victor Zverovich: [std::format in C++20](https://www.zverovich.net/2019/07/23/std-format-cpp20.html)  
 - {fmt}: [A modern formatting library](https://fmt.dev/latest/index.html)  
 
-[^1]: Ver [fmt overview](https://fmt.dev/7.1.2/#overview)
-[^2]: Ver [fmt benchmarks](https://github.com/fmtlib/fmt#benchmarks)
-[^3]: Ver [fmt performance](https://youtu.be/ptba_AqFYCM?t=2837) en CppCon 2017.
+
+[^1]: Ver [python str.format](https://docs.python.org/3/library/string.html#format-string-syntax)
+[^2]: Ver [String format method](https://realpython.com/python-formatted-output/#the-python-string-format-method)
+[^3]: Ver [fmt overview](https://fmt.dev/7.1.2/#overview)
+[^4]: Ver [fmt benchmarks](https://github.com/fmtlib/fmt#benchmarks)
+[^5]: Ver [fmt performance](https://youtu.be/ptba_AqFYCM?t=2837) en CppCon 2017.
