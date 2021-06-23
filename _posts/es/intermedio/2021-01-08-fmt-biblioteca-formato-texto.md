@@ -223,7 +223,7 @@ Benchmark de TinyFormat[^5].
 
 - Victor Zverovich: [std::format in C++20](https://www.zverovich.net/2019/07/23/std-format-cpp20.html)  
 - {fmt}: [A modern formatting library](https://fmt.dev/latest/index.html)  
-
+- [CppCon 2017](https://www.zverovich.net/slides/2017-cppcon.pdf)
 
 [^1]: Ver [python str.format](https://docs.python.org/3/library/string.html#format-string-syntax)
 [^2]: Ver [String format method](https://realpython.com/python-formatted-output/#the-python-string-format-method)
