@@ -28,9 +28,8 @@ header:
 pequeño, rápido, autocontenido, de alta fiabilidad, y de funcionalidad SQL
 completa.  
 La base de datos `SQLite` es un archivo de formato estable, multi plataforma, y
-retro compatible, usada comúnmente como contenedor para transferir
-contenido entre sistemas. No requiere configuración adicional ni servidores
-dedicados.  
+retro compatible, usada comúnmente para transferir contenido entre sistemas. No
+requiere configuración adicional ni servidores dedicados.  
 `SQLite` es uno de los motores de bases de datos relacionales más conocidos; su
 compatibilidad y portabilidad la hacen una herramienta ampliamente usada. Un
 archivo de base de datos `SQLite` se puede copiar libremente entre sistemas de
@@ -39,7 +38,7 @@ archivo de base de datos `SQLite` se puede copiar libremente entre sistemas de
 ## SQLite con Conan
 
 Hay múltiples maneras de incluir SQLite en un proyecto; personalmente considero
-que la manera más fácil de usar una biblioteca de terceros es por medio
+que la forma más sencilla de usar una biblioteca de terceros es por medio
 de `Conan`, siempre y cuando esté disponible. En esta publicación sobre
 [Conan como administrador de paquetes]({{ site.baseurl }}{% link _posts/es/intermedio/2020-11-08-conan-administrador-de-paquetes.md %})
 se puede ver más sobre cómo usar `Conan`.
@@ -60,11 +59,14 @@ Se ajusta el `CMakeLists.txt` para encontrar el paquete, y se enlaza la
 biblioteca:
 
 ```cmake
+# CMakeLists.txt
 #...
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_BINARY_DIR})
 find_package(SQLite3 REQUIRED)
 
 #...
 target_link_libraries(${PROJECT_NAME} PRIVATE SQLite::SQLite3)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 ```
 
 Y se incluye el archivo de cabecera:
@@ -74,7 +76,7 @@ Y se incluye el archivo de cabecera:
 ```
 
 `Conan` se encarga de la descarga e instalación, por lo cual los esfuerzos se
-pueden enfocar en el proyecto.  
+pueden enfocar más en el proyecto, y menos en el manejo de dependencias.  
 
 Un ejemplo básico de su uso es crear una tabla, poblarla, y consultarla.
 
