@@ -33,7 +33,7 @@ Existen varios compiladores en línea, entre ellos [godbolt.org](https://godbolt
 
 ## El código
 
-El siguiente código incrustrado es modificable y se compila automáticamente.
+El siguiente código incrustado es modificable y se compila automáticamente.
 
 <div>
 <iframe width="100%" height="400px" 
