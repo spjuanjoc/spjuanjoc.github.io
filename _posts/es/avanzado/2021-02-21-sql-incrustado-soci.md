@@ -137,15 +137,15 @@ consultarlos.
 CREATE TABLE tabla1
 (
     id      INTEGER,
-    name    VARCHAR2(100),
+    nombre  VARCHAR2(100),
     balance REAL
 );
 
-INSERT INTO tabla1 (id, name, balance)
+INSERT INTO tabla1 (id, nombre, balance)
 VALUES (7, 'Juan' , 100.20),
        (9, 'Juana', 200.10);
 
-SELECT id, name, balance FROM tabla1 WHERE id = 9;
+SELECT id, nombre, balance FROM tabla1 WHERE id = 9;
 ```
 
 
@@ -158,9 +158,9 @@ no están optimizados, pero son suficientes para demostrar el objetivo.
 Primero se deben incluir los archivos de cabecera requeridos:
 
 ```c++
-#include "fmt/format.h"
-#include "soci/soci.h"
-#include "soci/sqlite3/soci-sqlite3.h"
+#include <fmt/format.h>
+#include <soci/soci.h>
+#include <soci/sqlite3/soci-sqlite3.h>
 #include <string>
 #include <tuple>
 ```
@@ -188,7 +188,7 @@ void createTable(const std::string& tableName)
 CREATE TABLE {0} 
 (
     id      INTEGER,
-    name    VARCHAR2(100),
+    nombre  VARCHAR2(100),
     balance REAL
 );)", tableName);
   }
@@ -204,7 +204,7 @@ void insertInto(const std::string& tableName)
   if (tableExists(tableName))
   {
     sql << fmt::format(R"EOL(
-INSERT INTO {0} (id, name, balance)
+INSERT INTO {0} (id, nombre, balance)
 VALUES (7, 'Juan' , 100.20),
        (9, 'Juana', 200.10);
 )EOL", tableName);
@@ -223,7 +223,7 @@ std::tuple<int, std::string, double> getValues(const std::string& tableName, int
   std::string name{};
   double balance = 0.0;
 
-  sql << fmt::format("SELECT id, name, balance FROM {0} WHERE id = {1}", 
+  sql << fmt::format("SELECT id, nombre, balance FROM {0} WHERE id = {1}", 
                      tableName, 
                      idToFind),
          soci::into(id), soci::into(name), soci::into(balance);
@@ -242,7 +242,7 @@ valores para `ID=9`:
 
 ```c++
 #define CATCH_CONFIG_MAIN 
-#include "catch2/catch.hpp"
+#include <catch2/catch.hpp>
 
 //... Los demás #include, y funciones auxiliares
 
