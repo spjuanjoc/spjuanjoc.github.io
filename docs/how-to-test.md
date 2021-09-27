@@ -1,3 +1,8 @@
+---
+title: "Tests"
+sitemap: false
+---
+
 # How to test the site locally
 
 ## Install the tools

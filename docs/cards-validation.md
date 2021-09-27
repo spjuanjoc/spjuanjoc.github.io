@@ -1,4 +1,8 @@
-Validate cards
+---
+title: "Validate cards"
+sitemap: false
+---
+
 
 twitter:
 https://cards-dev.twitter.com/validator
