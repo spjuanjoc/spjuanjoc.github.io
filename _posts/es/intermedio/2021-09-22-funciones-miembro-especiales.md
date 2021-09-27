@@ -8,9 +8,9 @@ categories:
 tags:
   - C++
 
-excerpt: "Son aquellas funciones no estáticas especificadas dentro de una clase,
-          que bajo ciertas circunstancias se definen automáticamente por el 
-          compilador aun si no son declaradas por el usuario."
+excerpt: "Son aquellas funciones que bajo ciertas circunstancias se definen 
+          automáticamente por el compilador aun si no son declaradas por el 
+          usuario."
 
 header:
   og_image      : /assets/images/unsplash-clay-banks-hojas.jpg
@@ -30,7 +30,7 @@ automáticamente por el compilador aun si no son declaradas por el usuario.
 Para C++98 se pueden contar cuatro funciones miembro especiales: el constructor
 por defecto, el destructor, el constructor de copia, y el operador de asignación
 de copia. Estas funciones solo van a ser generadas si son requeridas; por
-ejemplo, si una clase especifica un constructor con argumentos entonces no se
+ejemplo, si una clase especifica un constructor con parámetros entonces no se
 genera uno por defecto; de no declararse constructor alguno el compilador lo
 genera de manera predeterminada.  
 Desde C++11 están disponibles dos miembros especiales adicionales: el
@@ -60,7 +60,7 @@ C++11 se extiende para ser la Regla de Cinco: si se declara uno de las
 siguientes cinco funciones miembro especiales se deben declarar todas (o ninguna
 para la Regla del Cero): Destructor, constructor de copia, constructor de
 movimiento, operador de asignación de copia, operador de asignación de
-movimiento.
+movimiento.[^ruleofthree]
 
 
 ## Default
@@ -73,8 +73,8 @@ virtual) es usando la palabra clave `default` así:
 class Base
 {
 public:
-  Base() = default;
-  virtual ~Base() = default;
+  Base() = default;  // Constructor
+  virtual ~Base() = default;  // Destructor
 
   // Operaciones de copia
   Base(const Base&) = default;
@@ -95,8 +95,8 @@ esta expresión indicaba que las funciones miembro especiales de copia se
 declaraban privadas y se dejaban sin definir. Fue un a expresión ampliamente
 usada, pero presentaba algunos inconvenientes; uno de ellos es que al intentar
 usar una operación de copia que no está permitida solamente se va a presentar un
-error en tiempo de Enlace, y no en tiempo de Compilación. De manera similar se
-define `boost::noncopiable` que es una clase dentro de las bibliotecas de
+error en tiempo de _Enlace_, y no en tiempo de _Compilación_. De manera similar
+se define `boost::noncopiable` que es una clase dentro de las bibliotecas de
 Boost.[^boost]
 
 Desde C++11 la forma correcta de deshabilitar las operaciones de copia en 
@@ -147,3 +147,4 @@ y del `std::thread`.
 [^item12]: Item 12: Scott Meyers - _Effective Modern C++_
 [^noncopyable]: Ver [Non copyable](https://dev-faqs.blogspot.com/2010/07/c-idioms-non-copyable.html)
 [^boost]: Ver [boost::noncopyable](https://www.boost.org/doc/libs/master/libs/core/doc/html/core/noncopyable.html)
+[^ruleofthree]: [La Regla de Tres/Cinco/Cero](https://es.cppreference.com/w/cpp/language/rule_of_three)
