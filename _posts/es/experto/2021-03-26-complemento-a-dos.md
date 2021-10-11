@@ -1,16 +1,19 @@
 ---
 title           : "Complemento a dos: binarios negativos"
 date            : 2021-03-26 
-last_modified_at: 2021-03-31
+last_modified_at: 2021-10-11
 
 categories:
   - Experto 
 tags:
-  - C++
-  - Bitset
+  - bitset
+  - binarios
+  - corriente
+  - hexadecimal
+  - cero negativo
 
 excerpt: "Hay varias maneras de representar números binarios con signo; una es 
-          por medio del Complemento a Dos, con la cual debe tener en 
+          por medio del Complemento a Dos, con la cual se debe tener en 
           cuenta el número de bits a representar."
 header:
   og_image      : /assets/images/unsplash-juliana-barquero-granos-de-cafe.jpg
@@ -124,7 +127,7 @@ ver primero el **Complemento a Uno**.
 
 La negación o el complemento a uno $C_{1}$ de un número binario es una operación que
 consiste en invertir los unos por ceros y viceversa. Se representa con el
-símbolo ${\sim}$ (virgulilla en español, tilde en inglés)  
+símbolo ${\sim}$ (virgulilla en español, _tilde_ en inglés)  
 
 ```text
         ~1 = 0
@@ -154,11 +157,11 @@ No obstante, este es el primer paso para llegar al $C_{2}$.
 
 En términos del complemento a uno es:
 
-$$ C_{2}^{N} = C_{1}^{N} - 1 $$
+$$ C_{2}^{N} = C_{1}^{N} + 1 $$
 
 En binario:
 
-$$ C_{2}^{b} = {\sim}(b) - 1 $$
+$$ C_{2}^{b} = {\sim}(b) + 1 $$
 
 El rango para 8 bits ahora va desde `-128` hasta `127` asegurando que haya
 solamente un cero. En general:
