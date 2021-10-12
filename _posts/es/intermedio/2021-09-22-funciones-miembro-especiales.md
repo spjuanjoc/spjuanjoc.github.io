@@ -6,7 +6,12 @@ last_modified_at: 2021-09-22
 categories:
   - Intermedio
 tags:
-  - C++
+  - no-copiable
+  - movimiento
+  - default
+  - delete
+  - regla de cinco
+  - boost
 
 excerpt: "Son aquellas funciones que bajo ciertas circunstancias se definen 
           automáticamente por el compilador aun si no son declaradas por el 
