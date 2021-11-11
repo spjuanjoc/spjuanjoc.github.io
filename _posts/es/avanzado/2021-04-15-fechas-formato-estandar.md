@@ -11,6 +11,7 @@ tags:
   - fmt
   - conan
   - spdlog
+  - time_t
 
 excerpt: "Una forma sencilla de representar la fecha-hora en el formato estándar
           **ISO 8601** es usando `std::chrono` y la biblioteca `{fmt}`."
@@ -135,8 +136,8 @@ En todos los casos el posible resultado, teniendo en cuenta la zona horaria
 
 ## Hora con mili segundos
 
-Obtener los mili segundos con `std::time_t` es un complejo, sin embargo 
-con `std::chrono::time_point` es un poco más sencillo:  
+Obtener los milisegundos con `std::time_t` es complejo y no vale la pena
+analizarlo ahora mismo; con `std::chrono::time_point` es un poco menos complejo:  
 
 ```c++
 #include <fmt/chrono.h>
@@ -169,7 +170,7 @@ la fecha-hora en el formato ISO_8601. En este ejemplo se usa la referencia a la
 receta de conan `spdlog/1.8.2`, y su uso es el siguiente:  
 
 ```c++
-#include "spdlog/spdlog.h"
+#include <spdlog/spdlog.h>
 
 int main() 
 {
