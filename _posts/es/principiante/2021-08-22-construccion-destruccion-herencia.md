@@ -7,6 +7,9 @@ categories:
   - Principiante
 tags:
   - C++
+  - herencia
+  - destructor
+  - virtual
 
 excerpt: "El orden de construcción es `A-B-C`. El orden de
           destrucción es el inverso: `C-B-A`."
