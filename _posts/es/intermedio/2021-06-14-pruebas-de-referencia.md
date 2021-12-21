@@ -145,6 +145,6 @@ cercano a 20 veces más rápido que usando la fórmula de relación de recurrenc
 ## Fuentes
 
 - De bfilipek: [micro-benchmarking libraries](https://www.bfilipek.com/2016/01/micro-benchmarking-libraries-for-c.html)
-- De Vordrodt: [Micro-benchmark](https://vorbrodt.blog/2019/03/18/micro-benchmarks/)
+- De Vorbrodt: [Micro-benchmark](https://vorbrodt.blog/2019/03/18/micro-benchmarks/)
 - Acerca de [nonius](https://nonius.io/)
 - [Quick benck](https://quick-bench.com/)
