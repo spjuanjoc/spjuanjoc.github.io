@@ -9,6 +9,11 @@ tags:
   - C++
   - conan
   - Catch2
+  - benchmark
+  - nonius
+  - quick bench
+  - fibonacci
+  - binet
 
 excerpt: "En programación se suelen usar las _benchmarks_, o pruebas de
           referencia, como una técnica para medir el rendimiento de un sistema 
@@ -107,7 +112,6 @@ El siguiente caso de prueba contiene las tres pruebas de referencia
 compiladas con `GCC`:
 
 ```c++
-
 TEST_CASE("should benchmark different fib(25)", "[fibonacci]")
 {
   BENCHMARK("regular   de n=25") { return regularFib(25); };
@@ -118,11 +122,11 @@ TEST_CASE("should benchmark different fib(25)", "[fibonacci]")
 
 El resultado para 100 muestras:
 
-| Nombre    | Iteraciones | Estimado    | Media       | Desviación (`σ`)|
-| :---:     | :---:       |  ---:       |  ---:       |  ---:           |
-| regular   | 1           | 53.1851 ms  | 525.406 us  | 24.0403 us      |
-| constexpr | 1           | 50.9678 ms  | 504.298 us  | 14.0223 us      |
-| Binet's   | 332         |  5.8432 ms  | 169.063 ns  | 13.1453 ns      |
+|  Nombre   | Iteraciones |   Estimado |      Media | Desviación (`σ`) |
+|:---------:|:-----------:|-----------:|-----------:|-----------------:|
+|  regular  |      1      | 53.1851 ms | 525.406 us |       24.0403 us |
+| constexpr |      1      | 50.9678 ms | 504.298 us |       14.0223 us |
+|  Binet's  |     332     |  5.8432 ms | 169.063 ns |       13.1453 ns |
 
 Se observa que usando la Fórmula de Binet se logra un tiempo de ejecución medio
 de `~169` nanosegundos, muy superior a la fórmula regular (`~525` 
@@ -145,6 +149,6 @@ cercano a 20 veces más rápido que usando la fórmula de relación de recurrenc
 ## Fuentes
 
 - De bfilipek: [micro-benchmarking libraries](https://www.bfilipek.com/2016/01/micro-benchmarking-libraries-for-c.html)
-- De Vordrodt: [Micro-benchmark](https://vorbrodt.blog/2019/03/18/micro-benchmarks/)
+- De Vorbrodt: [Micro-benchmark](https://vorbrodt.blog/2019/03/18/micro-benchmarks/)
 - Acerca de [nonius](https://nonius.io/)
 - [Quick benck](https://quick-bench.com/)

@@ -84,13 +84,13 @@ int main()
 Donde la representación `"%Y-%m-%d T %T%z"` corresponde a `YYYY-MM-DD T HH:mm:ss Z`
 según los especificadores de `std::put_time`[^2].
 
-|std::put_time|ISO 8601|
-|:---:|---|
-|%Y|  YYYY|
-|%m|  MM|
-|%d|  DD|
-|%T|  HH:mm:ss|
-|%z|  Z|
+| std::put_time | ISO 8601 |
+|:-------------:|----------|
+|      %Y       | YYYY     |
+|      %m       | MM       |
+|      %d       | DD       |
+|      %T       | HH:mm:ss |
+|      %z       | Z        |
 
 ## Usando la biblioteca {fmt}
 
