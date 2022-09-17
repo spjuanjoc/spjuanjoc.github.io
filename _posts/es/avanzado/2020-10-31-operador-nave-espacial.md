@@ -63,6 +63,8 @@ lo genere el compilador de manera automática, el código anterior es reducido a
 
 {% raw %}
 ````c++
+#include <compare>
+
 struct S
 {
   int value;
@@ -93,6 +95,7 @@ _range-based for-loop_ es tan simple como:
 
 {% raw %}
 ````c++
+#include <compare>
 #include <iostream>
 #include <vector>
 
@@ -129,6 +132,7 @@ El operador de comparación de tres vías está disponible en:
 El código mostrado se puede compilar en [compiler-explorer](https://compiler-explorer.com/).
 
 ## Fuentes
+
 - [Comparaciones por defecto](https://es.cppreference.com/w/cpp/language/default_comparisons)
 - [C++ 20's Spaceship operator](https://devblogs.microsoft.com/cppblog/simplify-your-code-with-rocket-science-c20s-spaceship-operator/) por Cameron DaCamara.
 - [Spaceship operator](https://blog.tartanllama.xyz/spaceship-operator/) por Sy Brand.
