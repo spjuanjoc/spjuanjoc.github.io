@@ -51,14 +51,14 @@ La forma tradicional es usar `iostreams` con `std::put_time` para la
 visualización.  
 Para obtener los valores con `std::time` al estilo C:  
 ```c++
-#include <ctime>   // Para std::time
-#include <iomanip> // Para std::put_time
+#include <ctime>    // Para std::time
+#include <iomanip>  // Para std::put_time
 #include <iostream>
 
 int main()
 {
-  const std::time_t now = std::time(nullptr);
-  const std::tm now_tm  = *(std::localtime(&now));
+  const std::time_t now_time_t = std::time(nullptr);
+  const std::tm     now_tm     = *(std::localtime(&now_time_t));
   std::cout << std::put_time(&now_tm, "%Y-%m-%dT%T%z");
   return 0;
 }
@@ -74,9 +74,9 @@ using std::chrono::system_clock;
 
 int main()
 {
-  const std::time_t now = system_clock::to_time_t(system_clock::now());
-  const std::tm     tm  = *(std::localtime(&now));
-  std::cout << std::put_time(&tm, "%Y-%m-%dT%T%z");
+  const std::time_t now_time_t = system_clock::to_time_t(system_clock::now());
+  const std::tm     now_tm     = *(std::localtime(&now_time_t));
+  std::cout << std::put_time(&now_tm, "%Y-%m-%dT%T%z");
   return 0;
 }
 ```
