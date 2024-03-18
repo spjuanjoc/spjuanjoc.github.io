@@ -28,7 +28,7 @@ header:
 CLion: El Entorno Integrado para Desarrollo de software enfocado en el lenguaje
 C++ es un producto de Jetbrains. 
 
-Cuando una persona que escribe software se acostumbra a una IDE es dificil
+Cuando una persona que escribe software se acostumbra a una IDE es difícil
 que la cambie o que pruebe otras, a menos que tenga los mismos atajos de
 teclado, que los configure manualmente, o que decida darse el tiempo de
 aprenderlos y acostumbrarse a los nuevos.
