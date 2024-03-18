@@ -42,7 +42,7 @@ $$ C_{2}^{N} = 2^{n} - N $$
 ## Con signo y sin signo
 
 En `C++` el número de bits de un número entero (`int`) depende del modelo de
-datos[^data_model], en un sistema puede ser 32 bits y en otro 64. Sin embargo
+datos[^data_model], en un sistema puede ser 32 bits y en otro 64. Sin embargo,
 hay tipos de enteros de tamaño explícito con lo cual se evita la dependencia en
 la implementación: hay enteros de 32 bits con signo (`int32_t`) y sin
 signo (`uint32_t`), como también hay de 8, 16 y 64.
@@ -58,15 +58,15 @@ $$ C_{2}^{200} = 2^{16} - 200 = 65336 $$
 
 Representación:  
 
-|$N$  |$C_{2}$ sin signo|$C_{2}$ con signo|Binario            |Hex     | bits($n$)|
-|:--- |     :---        |       :---      |        :---       | :---   | :---:  |
-|200  |`65'336`         |`-200`           |`11111111 00111000`|`0xFF38`|   16   |
+| $N$ | $C_{2}$ sin signo | $C_{2}$ con signo | Binario             | Hex      | bits($n$) |
+|:----|:------------------|:------------------|:--------------------|:---------|:---------:|
+| 200 | `65'336`          | `-200`            | `11111111 00111000` | `0xFF38` |    16     |
 
 ## Rango de números
 
 La cantidad de números a representar depende de los bits disponibles:
 es menor para 8 bits que para 16. En números sin signo el rango para 8 bits es
-de 0 a 255 ($2^{8}=256$ números), para 16 bits es de 0 a 65535 ($2^{16} =
+de 0 a 255 ($2^{8} = 256$ números), para 16 bits es de 0 a 65535 ($2^{16} = 
 65536$). Si se sobrepasan estos rangos entonces su representación queda
 truncada.
 
@@ -240,9 +240,9 @@ hex: ff38
 bin: 1111111100111000
 ```
 
-Lo cual es corresponde a la representación vista al principio, y los bytes que
+Lo cual corresponde a la representación vista al principio, y los bytes que
 el circuito externo debe enviar como repuesta al preguntarle por su corriente
-cuando es `-200 mA`.  
+cuando es `-200 mA`.
 
 ```c++
 uint16_t sin_signo = 0xFF38;
@@ -253,7 +253,7 @@ fmt::print("bin : {:b}\n", sin_signo);
 fmt::print("udec: {}\n",   con_signo);
 ```
 
-Resulta en:  
+Resulta en:
 
 ```c++
 ori : 65336
