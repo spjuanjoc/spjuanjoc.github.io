@@ -35,10 +35,10 @@ Este tipo de compilación tienen ciertas condiciones, por ejemplo la dependencia
 de la plataforma. Si se desea compilar una biblioteca hay que tener en cuenta 
 aún más argumentos.  
 
-`CMake` fue creado con el fin de facilitar la compilación multi-plataforma; 
+`CMake` fue creado con el fin de facilitar la compilación multiplataforma; 
 usualmente identifica automáticamente los generadores requeridos para la 
 plataforma en la cual se ejecuta, por ejemplo `"Unix"`, `"MinGW"`, o `"NMake"`, 
-o los soportados por IDEs específicas como `"Visual Studio 16 2019"`, y 
+o los soportados por IDE específicas como `"Visual Studio 16 2019"`, y 
 `"Xcode"`, entre otros.
 
 ## Ninja
@@ -48,9 +48,11 @@ requeridos para el sistema de compilación con el mismo nombre.
 Ninja está enfocado en optimizar la velocidad de compilación usando todos los 
 recursos disponibles.
 
-Se puede instalar desde su fuente, o con python:
+Se puede instalar desde su fuente, o con apt en linux:
 
-    pip3 install --user ninja
+```bash
+sudo apt install -y ninja-build
+```
 
 ## ccmake: CMake con interfaz 
 
@@ -61,17 +63,22 @@ apuntando al archivo `CMakeLists.txt`.
 
 ![ccmake](/assets/images/ccmake-ninja.png "Opciones de configuración en ccmake")
 
+Se puede instalar usando apt en linux:
+
+```bash
+sudo apt install -y cmake-courses-gui
+```
 
 ## Compilación Ninja
 
-Usualmente se elige un directorio específico para la compilación, ya que no
+Usualmente, se elige un directorio específico para la compilación, ya que no
 es recomendable compilar en el directorio raíz del proyecto.  
-Creando por ejemplo el directorio `build/`, para compilar desde éste se siguen 
+Creando por ejemplo el directorio `build/`, para compilar desde este se siguen 
 los pasos:
 
 1. Generar con `ccmake`
 
-    ```
+    ```bash
     ccmake .. -G "Ninja"
     ```
     `c` para configurar.  
@@ -80,13 +87,13 @@ los pasos:
 
 2. Compilar con ninja
 
-    ```
+    ```bash
     ninja -j8
     ```
 
 3. Ejecutar
 
-    ```
+    ```bash
     ./a.out
     ```
 
