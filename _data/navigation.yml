@@ -5,6 +5,8 @@ main:
     url: /categories/
   - title: "Etiquetas"
     url: /tags/
+  - title: "Acrónimos"
+    url: /acronyms/
   - title: "Referencias"
     url: /references/
   - title: "Acerca de"
