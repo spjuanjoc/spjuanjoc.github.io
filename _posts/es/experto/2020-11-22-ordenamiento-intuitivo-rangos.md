@@ -8,6 +8,11 @@ categories:
 tags:
   - C++20
   - Rangos
+  - std::ranges
+  - std::ranges::sort
+  - std::ranges::views
+  - Nave espacial
+
 
 excerpt: "La biblioteca de rangos incluida en `C++20` trae finalmente una
           funcionalidad con la cual realizar ordenamientos en contenedores 
@@ -70,7 +75,7 @@ Centinelas, Proyecciones, y Vistas.
 ## Ordenamiento de rangos
 
 Con la biblioteca de rangos el ordenamiento es de una manera mucho más
-intuitiva: no se le pasan iteradores sino que se le indica que se va a «ordenar
+intuitiva: no se le pasan iteradores, sino que se le indica que se va a «ordenar
 el siguiente rango»:
 
 ```c++
@@ -157,7 +162,7 @@ struct Persona
 
 int main()
 {
-  std::vector<Persona> personas{{30, "Juan"}, {20, "Sofía"}, {42, "Ana"}};
+  std::vector<Persona> personas{{4, "Juan"}, {2, "Ana"}, {42, "Juana"}};
   std::ranges::sort(personas);
 
   for (const auto it: personas)
@@ -172,28 +177,28 @@ int main()
 
 El resultado del ordenamiento es primero por edad y luego por nombre:
 
-    Sofía : 20
-    Juan  : 30
-    Ana   : 42
+    Juana : 42
+    Juan  : 4
+    Ana   : 2
 
 Si todos tuvieran la misma edad entonces el orden se da por el nombre:  
 
     Ana   : 30
     Juan  : 30
-    Sofía : 30
+    Juana : 30
 
 
 ## Rangos de Vistas
 
 A partir del uso de rangos se pueden utilizar funcionalidades más complejas de
-manera simple, tales como las Vistas (_views_). Por ejemplo para ordenar el
+manera simple, tales como las vistas (_views_). Por ejemplo para ordenar el
 rango de manera inversa:
 
 ```c++
 #include <ranges>
 //...
 
-  std::ranges::sort(std::views::reverse(personas));
+  std::ranges::sort(std::ranges::views::reverse(personas));
 
 ```
 
@@ -204,7 +209,7 @@ _pipe_:
 #include <ranges>
 //...
 
-  for (const auto it: personas | std::views::reverse)
+  for (const auto& it: personas | std::ranges::views::reverse)
   {
     std::cout << it.nombre << " : " << it.edad << '\n';
   }
