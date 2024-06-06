@@ -76,6 +76,7 @@ comments:
 search                : true
 remote_theme          : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin : "dark"
+minimal_mistakes_skin2: "air"
 
 # Plugins
 # ==============================================================================
