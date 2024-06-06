@@ -104,9 +104,11 @@ de un algoritmo implementado de diferentes maneras para conocer cuál puede
 ser más eficiente. En este caso se usa la _Secuencia de Fibonacci_, y 
 se implementa de tres maneras:
 
-- regularFib: usando la relación de recurrencia. 
-- constexprFib: la misma fórmula pero haciendo la función `constexpr`.
-- binetsFib: usando la Fórmula de Binet.
+- regularFib: usando la relación de recurrencia
+  - $f_0 = 0, f_1 = 1, f_n = f_{n-1} + f_{n -2}$
+- constexprFib: la misma fórmula pero haciendo la función `constexpr`
+- binetsFib: usando la Fórmula de Binet[^binet]
+  - $f_n = \frac{ (1 + \sqrt{5} )^{n} - (1- \sqrt{5})^{n} } { 2^{n} * \sqrt{5} }$
 
 El siguiente caso de prueba contiene las tres pruebas de referencia
 compiladas con `GCC`:
@@ -152,3 +154,7 @@ cercano a 20 veces más rápido que usando la fórmula de relación de recurrenc
 - De Vorbrodt: [Micro-benchmark](https://vorbrodt.blog/2019/03/18/micro-benchmarks/)
 - Acerca de [nonius](https://nonius.io/)
 - [Quick benck](https://quick-bench.com/)
+
+---
+
+[^binet]: [Binet's formula](https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet)

@@ -4,12 +4,13 @@ sitemap: false
 ---
 
 
-twitter:
-https://cards-dev.twitter.com/validator
-
-enter the page URL
+Enter the page URL
 e.g.
 https://spjuanjoc.github.io/avanzado/operador-nave-espacial/
+
+
+twitter:
+https://cards-dev.twitter.com/validator
 
 facebook:
 https://developers.facebook.com/tools/debug/
