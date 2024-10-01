@@ -13,7 +13,7 @@ tags:
 
 excerpt: "Señales y Ranuras se refiere a una funcionalidad para comunicación 
           entre objetos. En `C++` es un término acuñado a `Qt` enfocado en la 
-          comunicación en interfaces gráficas. También pueden verse como una
+          comunicación en interfaces gráficas. También es visto como una
           funcionalidad para desacoplar un remitente (la señal) de sus 
           destinatarios (las ranuras)"
 
@@ -38,7 +38,7 @@ tales como `SIGSEGV` (Acceso de memoria inválido; como fallo de segmentación) 
 Señales y Ranuras se refiere a una funcionalidad para comunicación entre
 objetos. En C++ es un término acuñado a Qt[^2] enfocado en la comunicación en
 interfaces gráficas.
-También pueden verse como una funcionalidad para desacoplar un remitente (la
+También es visto como una funcionalidad para desacoplar un remitente (la
 señal) de sus destinatarios (las ranuras).
 
 Una señal es un objeto que puede informar a otros cuando algo en su estado
@@ -52,12 +52,14 @@ y cuando la estén observando. Pueden publicar una información determinada.
 
 Por otro lado, una ranura es una funcionalidad que puede ejecutarse cuando una
 señal se conecta a ella. Puede ser un método ordinario, una función libre, una
-función lambda. 
+expresión lambda. 
 
 Otros conceptos relevantes son los de Activación y Conexión; activación se
 refiere a cuando una señal es emitida y la ranura conectada es invocada; una
 conexión es la asociación entre una señal y una ranura; puede haber múltiples
-conexiones entre señales y ranuras.
+conexiones entre señales y ranuras, es decir, varias ranuras pueden estar
+conectadas a una señal, y varias señales pueden tener conexión a una ranura, 
+teniendo en cuenta que cada conexión es independiente.
 
 La señal es observable, la ranura es el observador. La señal gestiona la
 conexión, la ranura ejecuta la funcionalidad requerida.
@@ -67,14 +69,13 @@ conexión, la ranura ejecuta la funcionalidad requerida.
 Las Señales y Ranuras se usan comúnmente como concepto para formar el patrón
 Observador, para comunicación asíncrona de entrada-salida (_io_). Este patrón es
 ampliamente usado en la comunicación entre interfaces gráficas y sus
-funcionalidades, por ejemplo, lo que debería ejecutarse al presionar un botón
-sin que se bloquee el procesamiento de la interfaz gráfica ni la interacción
-del usuario.
+funcionalidades; por ejemplo, el procesamiento que debería ejecutarse al 
+presionar un botón en la interfaz gráfica.
 
 Suponiendo que se tiene una pantalla con un botón para guardar un documento,
 al presionar el botón de Guardar se emite una señal; esa señal está previamente
-conectada a una ranura que ejecuta los procesos requeridos para que el documento
-sea almacenado.
+conectada a una ranura que ejecuta los procesos requeridos para tomar el 
+documento, elegir la forma de almacenamiento, y realizar el guardado.
 
 ## Bibliotecas para manejo de señales
 
@@ -92,7 +93,7 @@ de devolución de llamadas (_callbacks_), editores (_publishers_), o eventos.
 Las ranuras representan los _callback receivers_, subscriptores 
 (_subscribers_), u objetivos de los eventos, los cuales son invocados cuando la
 señal es emitida. La precede _Signals1_ que fue marcada como obsoleta, ya que no
-funciona correctamente en sistemas multi-hilos.
+funciona correctamente en aplicaciones multi-hilo.
 
 ## Ejemplo
 
@@ -117,9 +118,18 @@ int main() {
 
   slot1.disconnect();
   slot2.disconnect();
+  
+  printTextSignal("Adiós Boost.Signals2");
 
   return 0;
 }
+```
+
+El resultado es la ejecución de las dos ranuras cuando se emite la señal:
+
+```text
+Hola Boost.Signals2
+Hola Boost.Signals2
 ```
 
 La función `onPrint` es la ranura; por sí sola es una función común.  
@@ -132,18 +142,23 @@ El llamado a `printTextSignal` con el argumento de texto emite la señal, por lo
 que las dos ranuras se enteran y ejecutan `std::print` para el mensaje
 contenido.  
 Finalmente, las dos conexiones son finalizadas; futuros llamados a
-`printTextSignal` no ejecutarían la funcionalidad dado que ya no hay conexión.
+`printTextSignal` no ejecutan la funcionalidad dado que ya no hay conexión, por
+lo cual no se imprime el segundo mensaje `Adiós Boost.Signals2`.
 
-Con `libsigcpp` es bastante similar, pero la emisión de la señal es
+Con `libsigcpp` es bastante similar; la emisión de la señal es
 explícitamente nombrada:
 
 ```c++
 #include <sigc++/sigc++.h>
 //...
   sigc::signal<void(const std::string&)> printTextSignal;
-  printTextSignal.connect(sigc::ptr_fun(&onPrint));
-  printTextSignal.emit("Hola sigc++-3\n");
+  const auto slot1 = printTextSignal.connect(sigc::ptr_fun(&onPrint));
+  printTextSignal.emit("Hola sigc++-3");
 //...
+```
+
+```text
+Hola sigc++-3
 ```
 
 Con `signals-light` se puede hacer un conteo de las ranuras conectadas
@@ -154,10 +169,16 @@ Con `signals-light` se puede hacer un conteo de las ranuras conectadas
 
   sl::Signal<void(const std::string&)> printTextSignal;
   const auto slot1 = printTextSignal.connect([](const auto& name){onPrint(name);});
-  printTextSignal.connect(&onPrint);
+  const auto slot2 = printTextSignal.connect(&onPrint);
   printTextSignal("Hola signals-light");
   std::print("Ranuras conectadas: {}", printTextSignal.slot_count());
 //...
+```
+
+```text
+Hola signals-light
+Hola signals-light
+Ranuras conectadas: 2
 ```
 
 ---
