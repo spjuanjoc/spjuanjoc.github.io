@@ -276,8 +276,11 @@ TEST_CASE("should get a row given an id value")
 
 
 ## Fuentes
+
 - Acerca de [Raw strings literals](https://youtu.be/DiZ-az_nJMM)
 - Acerca de [Conan](https://docs.conan.io/en/latest/)
+
+---
 
 [^1]: Ver [SOCI](http://soci.sourceforge.net/doc/master/)
 [^2]: Ver [Sobre fmt]({{ site.baseurl }}{% link _posts/es/intermedio/2021-01-08-fmt-biblioteca-formato-texto.md %})

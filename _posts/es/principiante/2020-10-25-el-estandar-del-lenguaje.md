@@ -81,6 +81,8 @@ se pueden apreciar todas las características agrupadas de acuerdo a la versión
 estándar.
 
 ---
+
 ## Fuentes
+
 - [Soporte de compiladores de C++](https://es.cppreference.com/w/cpp/compiler_support)
 - [Biblioteca estándar GNU de C++](https://gcc.gnu.org/onlinedocs/libstdc++/faq.html)

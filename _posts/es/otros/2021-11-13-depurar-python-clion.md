@@ -127,4 +127,5 @@ para depurar, `Ctrl+F2` para interrumpir la depuración.
 - [Configure Python interpreters in CLion](https://www.jetbrains.com/help/clion/configuring-available-python-interpreters.html)
 
 ---
-[^jetbrains]: [Python interpreters](https://www.jetbrains.com/help/clion/configuring-available-python-interpreters.html)
+
+[^jetbrains]: Ver [Python interpreters](https://www.jetbrains.com/help/clion/configuring-available-python-interpreters.html)

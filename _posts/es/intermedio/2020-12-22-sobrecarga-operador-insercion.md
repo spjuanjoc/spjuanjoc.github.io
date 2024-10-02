@@ -88,5 +88,6 @@ inserción, _friend_ y _no-miembro_, como una implementación del patrón
 _intrusive visitor_.
 
 ## Fuentes
+
 - CppReference: [Biblioteca de entrada/salida](https://es.cppreference.com/w/cpp/io)
 - Geeks for geeks: [Overloading stream operators](https://www.geeksforgeeks.org/overloading-stream-insertion-operators-c/)

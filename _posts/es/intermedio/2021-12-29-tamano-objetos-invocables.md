@@ -111,5 +111,5 @@ que el tamaño de `functionImprime` es 32 Bytes.
 
 ---
 
-[^sizeof]: [Operador sizeof](https://es.cppreference.com/w/cpp/language/sizeof)
+[^sizeof]: Ver [Operador sizeof](https://es.cppreference.com/w/cpp/language/sizeof)
 [^cpplambdas18]: El tipo de una expresión lambda: Bartlomiej Filipek - Lambdas en C++

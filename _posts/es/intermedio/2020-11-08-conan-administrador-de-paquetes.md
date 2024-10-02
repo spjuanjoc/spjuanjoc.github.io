@@ -242,7 +242,7 @@ compilación.
 | Conan | \> 1.28.1  |
 
 
-## Referencias
+## Fuentes
 
 - Documentación oficial de [Conan](https://docs.conan.io/en/latest/)
 - Buscar recetas de Conan en [Conan center](https://conan.io/center/)

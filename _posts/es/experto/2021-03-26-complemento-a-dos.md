@@ -270,5 +270,7 @@ udec: -200
 - Jason Turner: [C++ Weekly-243-The magic of Two's Complement binary math](https://youtu.be/s89pOAC_X08)
 - Electronics tutorials: [Signed binary numbers](https://www.electronics-tutorials.ws/binary/signed-binary-numbers.html)
 
+---
+
 [^wiki]: Ver [Complemento a dos](https://es.wikipedia.org/wiki/Complemento_a_dos)
 [^data_model]: Ver [Modelos de datos](https://es.cppreference.com/w/cpp/language/types)
