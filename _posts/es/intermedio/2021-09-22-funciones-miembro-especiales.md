@@ -148,8 +148,9 @@ y del `std::thread`.
 - Scott Meyers - Effective Modern C++ 
 
 ---
+
 [^item17]: Item 17: Scott Meyers - _Effective Modern C++_
 [^item12]: Item 12: Scott Meyers - _Effective Modern C++_
 [^noncopyable]: Ver [Non copyable](https://dev-faqs.blogspot.com/2010/07/c-idioms-non-copyable.html)
 [^boost]: Ver [boost::noncopyable](https://www.boost.org/doc/libs/master/libs/core/doc/html/core/noncopyable.html)
-[^ruleofthree]: [La Regla de Tres/Cinco/Cero](https://es.cppreference.com/w/cpp/language/rule_of_three)
+[^ruleofthree]: Ver [La Regla de Tres/Cinco/Cero](https://es.cppreference.com/w/cpp/language/rule_of_three)

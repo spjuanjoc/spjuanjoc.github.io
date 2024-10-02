@@ -157,4 +157,4 @@ cercano a 20 veces más rápido que usando la fórmula de relación de recurrenc
 
 ---
 
-[^binet]: [Binet's formula](https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet)
+[^binet]: Ver [Binet's formula](https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet)

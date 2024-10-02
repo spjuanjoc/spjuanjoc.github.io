@@ -181,10 +181,12 @@ Al correr el ejecutable se obtiene el resultado esperado:
 ---
 
 ## Consideraciones
+
 - Para versiones de cmake menores a 3.15 pueden aparecer mensajes de 
   advertencia relacionados con el comando `target_sources()`.
 
 ## Fuentes
+
 - Documentación oficial de [CMake](https://cmake.org/cmake/help/latest/index.html)
 - Henry Schreiner: [Introducción a CMake moderno](https://cliutils.gitlab.io/modern-cmake/) - Gitbook.
 - Pablo Arias: [It's time to do cmake right](https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/) - Blog.

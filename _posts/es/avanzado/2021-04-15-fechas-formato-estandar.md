@@ -185,12 +185,15 @@ Con lo cual se obtiene:
     [2021-04-15 18:20:28.157] [info] Hola spdlog
 
 
-## Referencias
+## Fuentes
+
 - Representaciones de fechas por países: [Date and time representations](https://en.wikipedia.org/wiki/Date_format_by_country)
 - Sobre el estándar [ISO_8601](https://es.wikipedia.org/wiki/ISO_8601)
 - Sobre [milisegundos en C++](https://www.delftstack.com/es/howto/cpp/how-to-get-time-in-milliseconds-cpp/)
 - Sobre [chrono](https://es.cppreference.com/w/cpp/chrono)
 - Sobre [spdlog](https://github.com/gabime/spdlog/wiki/1.-QuickStart)
+
+---
 
 [^1]: Ver [ISO 8601 w3 Date and time formats](https://www.w3.org/TR/NOTE-datetime)
 [^2]: Ver [std::put_time](https://es.cppreference.com/w/cpp/io/manip/put_time)

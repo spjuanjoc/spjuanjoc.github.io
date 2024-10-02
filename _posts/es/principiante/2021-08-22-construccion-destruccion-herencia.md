@@ -95,6 +95,7 @@ Para profundizar sobre el tema ver [^1] y [^2].
 - [Destructor](http://eel.is/c++draft/class.dtor)
 - ISO Cpp [Multiple inheritance](https://isocpp.org/wiki/faq/multiple-inheritance#mi-vi-ctor-order)
 
+---
 
-[^1]: [Understanding virtual tables](https://pabloariasal.github.io/2017/06/10/understanding-virtual-tables/)
+[^1]: Ver [Understanding virtual tables](https://pabloariasal.github.io/2017/06/10/understanding-virtual-tables/)
 [^2]: The Cherno [Virtual destructors in C++](https://youtu.be/jELbKhGkEi0) 

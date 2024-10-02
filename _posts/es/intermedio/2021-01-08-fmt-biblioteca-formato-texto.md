@@ -225,6 +225,8 @@ Benchmark de TinyFormat[^5].
 - {fmt}: [A modern formatting library](https://fmt.dev/latest/index.html)  
 - [CppCon 2017](https://www.zverovich.net/slides/2017-cppcon.pdf)
 
+---
+
 [^1]: Ver [python str.format](https://docs.python.org/3/library/string.html#format-string-syntax)
 [^2]: Ver [String format method](https://realpython.com/python-formatted-output/#the-python-string-format-method)
 [^3]: Ver [fmt overview](https://fmt.dev/7.1.2/#overview)

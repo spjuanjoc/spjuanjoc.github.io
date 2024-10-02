@@ -306,9 +306,11 @@ Entonces `rem = x - quo * y`
 
 ## Fuentes
 
-[^1]: [Operadores aritméticos](https://es.cppreference.com/w/cpp/language/operator_arithmetic)
-[^2]: [SIGFPE](https://www.man7.org/linux/man-pages/man7/signal.7.html)
-
 - [std::div]([std::div](https://es.cppreference.com/w/cpp/numeric/math/div))
 - [std::remainder](https://es.cppreference.com/w/cpp/numeric/math/remainder)
 - [std::fmod](https://es.cppreference.com/w/cpp/numeric/math/fmod)
+
+---
+
+[^1]: Ver [Operadores aritméticos](https://es.cppreference.com/w/cpp/language/operator_arithmetic)
+[^2]: Ver [SIGFPE](https://www.man7.org/linux/man-pages/man7/signal.7.html)

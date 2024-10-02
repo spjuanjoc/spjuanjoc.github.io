@@ -227,6 +227,7 @@ La biblioteca de rangos está disponible en:
 - Como biblioteca de terceros en Range-V3.
 
 ## Fuentes
+
 - Hannes Hauswedell: [A beginner's guide to C++ Ranges](https://hannes.hauswedell.net/post/2019/11/30/range_intro/)
 - Eric Niebler: [Range-V3](https://ericniebler.github.io/range-v3/)
 - Tristan Brindle: [An Overview of Standard Ranges](https://youtu.be/SYLgG7Q5Zws) - CppCon 2019.

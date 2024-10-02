@@ -147,7 +147,7 @@ Y si se le añade el manejo de la dependencia SFML usando Conan es
 posible tomar el código fuente y compilarlo. Así, aprender C++ puede hacerse
 más entretenido.
 
-## Referencias
+## Fuentes
 
 - [Gtk hello world](https://www.gtk.org/docs/getting-started/hello-world)
 - [Hello Qt](https://doc.qt.io/archives/3.3/tutorial1-01.html)

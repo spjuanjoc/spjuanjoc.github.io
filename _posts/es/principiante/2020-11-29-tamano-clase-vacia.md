@@ -101,4 +101,5 @@ El resultado será:
 ---
 
 ## Fuentes
+
 - Rakesh Singh: [What is size of an Empty Class in C++?](https://www.interviewsansar.com/size-of-an-empty-class/)
