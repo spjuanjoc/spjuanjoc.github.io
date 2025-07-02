@@ -236,10 +236,10 @@ compilación.
 
 * Las versiones usadas en los ejemplos son:
 
-|Paquete | Versión |
-|---:|:---:|
-| CMake | \> 3.0     |
-| Conan | \> 1.28.1  |
+| Paquete |  Versión  |
+|--------:|:---------:|
+|   CMake |  \> 3.0   |
+|   Conan | \> 1.28.1 |
 
 
 ## Fuentes
